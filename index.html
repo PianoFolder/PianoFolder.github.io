@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piano Folder — เรียนเปียโนกับครูแฟ้ม</title>
+<meta name="description" content="คอร์สเปียโนออนไลน์สำหรับผู้ใหญ่เริ่มต้น โดยครูแฟ้ม Piano Folder">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF8F1;
+    --sage:#6F8F78;
+    --sage-deep:#3F5A48;
+    --ink:#2B342D;
+    --gold:#C2A15A;
+    --line:#DFE4DA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'IBM Plex Sans Thai',system-ui,sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    display:flex;
+    justify-content:center;
+    padding:12vh 24px 8vh;
+  }
+  main{width:100%;max-width:34rem}
+
+  .mark{
+    font-size:.95rem;
+    letter-spacing:.14em;
+    color:var(--sage);
+    font-weight:600;
+  }
+  h1{
+    font-size:clamp(2rem,7vw,2.9rem);
+    font-weight:600;
+    line-height:1.25;
+    margin:.6rem 0 1rem;
+    color:var(--sage-deep);
+  }
+  .lede{font-size:1.05rem;max-width:30rem;color:#4A554C}
+
+  .rule{
+    height:2px;
+    width:3.5rem;
+    background:var(--gold);
+    margin:2.6rem 0 1.4rem;
+  }
+
+  nav{display:flex;flex-direction:column}
+  nav a{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+    padding:1.1rem .2rem;
+    border-top:1px solid var(--line);
+    color:var(--ink);
+    text-decoration:none;
+    transition:color .15s ease,padding-left .15s ease;
+  }
+  nav a:last-child{border-bottom:1px solid var(--line)}
+  nav a:hover,nav a:focus-visible{color:var(--sage);padding-left:.5rem}
+  nav a:focus-visible{outline:2px solid var(--sage);outline-offset:4px}
+  .label{font-weight:600;font-size:1.05rem}
+  .note{font-size:.9rem;color:#7A857C;text-align:right;flex-shrink:0}
+
+  footer{margin-top:3.5rem;font-size:.85rem;color:#8B948C}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <p class="mark">Piano Folder</p>
+  <h1>เล่นเปียโนให้เป็นเพลง<br>ได้สักที</h1>
+  <p class="lede">คอร์สเปียโนออนไลน์สำหรับผู้ใหญ่ที่เริ่มจากศูนย์ สอนโดยครูแฟ้ม ประสบการณ์สอนเปียโนเกือบ 20 ปี</p>
+
+  <div class="rule"></div>
+
+  <nav>
+    <a href="/piano-collection/">
+      <span class="label">Piano Collection</span>
+      <span class="note">รวมเพลงทั้งหมด</span>
+    </a>
+    <a href="https://lin.ee/Nd6pxlW">
+      <span class="label">ทักครูแฟ้มทาง LINE</span>
+      <span class="note">@PianoFolder</span>
+    </a>
+  </nav>
+
+  <footer>© Piano Folder · หาดใหญ่</footer>
+</main>
+</body>
+</html>
