@@ -216,6 +216,7 @@ function renderB2(){
       '<div class="until">' + (before ? 'เปิดในอีก ' : 'เหลือเวลา ') + '<span class="cd" id="b2cd"></span></div>';
   if (!before) $('b2price').insertAdjacentHTML('beforeend', '<div class="until" style="color:var(--c-ink-soft)">💻 E-Book ' + fmt(pre ? B2_EBOOK.pre : B2_EBOOK.reg) + ' · 🎁 เซ็ตคู่ 2 เล่ม แถมคอร์สฟรี 1 เพลง</div>');
   const btn = $('b2btn');
+  btn.classList.toggle('btn--line', before); btn.classList.toggle('btn--sage', !before);
   if (before) { btn.textContent = 'แจ้งเตือนฉันเมื่อเปิดพรีเซล'; btn.href = lineMsg('ขอรับแจ้งเตือนเมื่อเปิดพรีเซล หนังสือ ปลดล็อกเปียโน 2 มือ'); btn.target = '_blank'; btn.rel = 'noopener'; }
   else { btn.textContent = pre ? 'สั่งจองราคาพรีเซล' : 'สั่งซื้อ'; btn.href = 'book2/#order'; btn.removeAttribute('target'); }
   tick();
