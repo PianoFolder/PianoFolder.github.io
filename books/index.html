@@ -214,7 +214,7 @@ function renderB2(){
     : '<span class="lbl">' + (before ? 'ราคาพรีเซล เริ่ม ' + thDate(T0) : 'ราคาพรีเซล ถึง ' + thDate(T1)) + '</span>' +
       '<div class="pr"><b>' + fmt(B2.pre) + '</b><s>ปกติ ' + fmt(B2.reg) + '</s></div>' +
       '<div class="until">' + (before ? 'เปิดในอีก ' : 'เหลือเวลา ') + '<span class="cd" id="b2cd"></span></div>';
-  if (!before) $('b2price').insertAdjacentHTML('beforeend', '<div class="until" style="color:var(--c-ink-soft)">💻 E-Book ' + fmt(pre ? B2_EBOOK.pre : B2_EBOOK.reg) + ' · 🎁 เซ็ตคู่ 2 เล่ม แถมคอร์สฟรี 1 เพลง</div>');
+  if (!before) $('b2price').insertAdjacentHTML('beforeend', '<div class="until" style="color:var(--c-ink-soft)">💻 E-Book ' + fmt(pre ? B2_EBOOK.pre : B2_EBOOK.reg) + ' · 🎁 เซ็ตคู่ 2 เล่ม แถมคอร์ส Piano Collection ฟรี 1 เพลง (มูลค่า ฿490)</div>');
   const btn = $('b2btn');
   btn.classList.toggle('btn--line', before); btn.classList.toggle('btn--sage', !before);
   if (before) { btn.textContent = 'แจ้งเตือนฉันเมื่อเปิดพรีเซล'; btn.href = lineMsg('ขอรับแจ้งเตือนเมื่อเปิดพรีเซล หนังสือ ปลดล็อกเปียโน 2 มือ'); btn.target = '_blank'; btn.rel = 'noopener'; }
