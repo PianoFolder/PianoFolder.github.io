@@ -47,6 +47,7 @@ section{padding-block:var(--section-y)}
 .btn--line{background:var(--c-green)}.btn--line:hover{background:#05a647}
 .btn--block{width:100%}
 
+#orderBox .sum,#qtyRow{scroll-margin-top:84px}
 .site-header{position:sticky;top:0;z-index:10;background:rgb(255 255 255 / .94);backdrop-filter:blur(6px);border-bottom:1px solid var(--c-line)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:60px}
 .brand{font-weight:800;font-size:1.1rem;color:var(--c-ink);text-decoration:none;white-space:nowrap}
@@ -449,7 +450,7 @@ section{padding-block:var(--section-y)}
       <details><summary>อ่านโน้ตไม่เป็น เรียนได้ไหม?</summary><p>ได้ครับ โน้ตในเล่มมีชื่อตัวโน้ตกำกับบนหัวโน้ตทุกตัว และทุกท่อนมีคลิปสอนให้ดูว่ากดคีย์ไหน อ่านโน้ตไม่เก่ง ก็เล่นได้ครับ</p></details>
       <details><summary>ต้องมีหนังสือ “รู้งี้...เล่นเปียโนได้นานแล้ว” ก่อนไหม?</summary><p>ถ้าเล่นมือขวาเป็นทำนอง และเล่นคอร์ดมือซ้ายง่าย ๆ ได้แล้ว เริ่มเล่มนี้ได้เลย ถ้ายังไม่มีพื้นฐาน แนะนำให้เริ่มจาก “รู้งี้...เล่นเปียโนได้นานแล้ว” ก่อน หรือสั่งเป็นเซ็ตคู่ครับ</p></details>
       <details><summary>ดูคลิปสอนยังไง?</summary><p>สแกน QR ในเล่มด้วยกล้องมือถือ คลิปเปิดได้ทันที ไม่ต้องสมัครสมาชิก ไม่ต้องเข้ากลุ่มครับ</p></details>
-      <details><summary>สั่งช่วงพรีเซล จะได้หนังสือเมื่อไหร่?</summary><p>จัดส่งตามลำดับการสั่งจองเมื่อหนังสือพิมพ์เสร็จ ทีมครูแฟ้มจะแจ้งวันจัดส่งให้ในแชท LINE ครับ</p></details>
+      <details><summary>สั่งช่วงพรีเซล จะได้หนังสือเมื่อไหร่?</summary><p>จัดส่งตามลำดับการสั่งจองเมื่อหนังสือพิมพ์เสร็จ อยากเช็กสถานะพัสดุ ทักแชท LINE ได้ตลอดครับ</p></details>
       <details><summary>E-Book กับเล่มจริงต่างกันยังไง?</summary><p>เนื้อหาเหมือนกันทุกอย่าง E-Book อ่านผ่านลิงก์ในมือถือ แท็บเล็ต หรือคอม แตะ QR ในเล่มแล้วเปิดคลิปสอนได้ทันที เริ่มเรียนได้เลยไม่ต้องรอส่ง (ไม่ใช่ไฟล์ PDF) ส่วนเล่มจริงเป็นหนังสือ A4 เย็บกลาง กางวางบนเปียโนได้ สแกน QR ด้วยกล้องมือถือครับ</p></details>
       <details><summary>เซ็ตคู่ได้อะไรบ้าง?</summary><p>ได้หนังสือเล่มจริง 2 เล่ม คือ รู้งี้...เล่นเปียโนได้นานแล้ว และ ปลดล็อกเปียโน 2 มือ พร้อมคอร์ส Piano Collection ฟรี 1 เพลง เลือกเพลงที่ชอบได้เอง ส่งฟรีครับ</p></details>
       <details><summary>ส่งการบ้านยังไง?</summary><p>อัดคลิปตอนคุณเล่น ส่งมาทาง LINE @PianoFolder เล่นได้แค่ท่อนเดียวก็ส่งมาได้ ยิ่งส่งบ่อย ยิ่งเล่นได้เร็วครับ</p></details>
@@ -572,8 +573,8 @@ function render(){
   $('fmtNote').innerHTML = eb
     ? '💻 <strong>เรียนได้ทันที</strong> ไม่ต้องรอหนังสือ อ่านผ่านลิงก์ในมือถือ แท็บเล็ต หรือคอม แตะ QR ในเล่มแล้วเปิดคลิปสอนได้เลย · <strong>ไม่ใช่ไฟล์ PDF</strong>'
     : kind === 'set'
-      ? '🎁 <strong>แถมคอร์ส Piano Collection ฟรี 1 เพลง</strong> (มูลค่า ' + fmt(GIFT) + ') เลือกเพลงที่ชอบได้เอง · เพลง Für Elise มีในทั้ง 2 เล่ม (เวอร์ชันเดียวกัน)' + (pre ? '<br>📦 พรีเซล: ส่งพร้อมกันทั้ง 2 เล่มเมื่อ “ปลดล็อกเปียโน 2 มือ” พิมพ์เสร็จ ทีมครูแฟ้มจะแจ้งวันจัดส่งในแชท LINE' : '<br>📦 จัดส่งถึงบ้าน <strong>' + SHIP + '</strong>')
-      : pre ? '📦 <strong>พรีเซล:</strong> จัดส่งตามลำดับการสั่งจองเมื่อหนังสือพิมพ์เสร็จ ทีมครูแฟ้มจะแจ้งวันจัดส่งในแชท LINE'
+      ? '🎁 <strong>แถมคอร์ส Piano Collection ฟรี 1 เพลง</strong> (มูลค่า ' + fmt(GIFT) + ') เลือกเพลงที่ชอบได้เอง · เพลง Für Elise มีในทั้ง 2 เล่ม (เวอร์ชันเดียวกัน)' + (pre ? '<br>📦 พรีเซล: ส่งพร้อมกันทั้ง 2 เล่มเมื่อ “ปลดล็อกเปียโน 2 มือ” พิมพ์เสร็จ · อยากเช็กสถานะพัสดุ ทักแชท LINE ได้ตลอด' : '<br>📦 จัดส่งถึงบ้าน <strong>' + SHIP + '</strong>')
+      : pre ? '📦 <strong>พรีเซล:</strong> จัดส่งตามลำดับการสั่งจองเมื่อหนังสือพิมพ์เสร็จ · อยากเช็กสถานะพัสดุ ทักแชท LINE ได้ตลอด'
             : '📦 จัดส่งหนังสือเล่มจริงถึงบ้าน <strong>' + SHIP + '</strong>';
   const name = eb ? 'E-Book ' + BOOK : kind === 'set' ? 'เซ็ตคู่ รู้งี้...เล่นเปียโนได้นานแล้ว + ปลดล็อกเปียโน 2 มือ' : BOOK + ' (เล่มจริง)';
   $('sumLabel').textContent = eb ? name : name + ' × ' + qty;
@@ -642,7 +643,12 @@ function tick(){
   document.querySelectorAll('[data-cd]').forEach(el => el.innerHTML = cdHTML(target - t));
 }
 
-document.querySelectorAll('.fmt').forEach(b => b.onclick = () => { kind = b.dataset.fmt; render(); });
+document.querySelectorAll('.fmt').forEach(b => b.onclick = () => {
+  kind = b.dataset.fmt; render();
+  // เลือกแบบแล้ว เลื่อนลงไปที่จำนวน/ยอดโอน + ช่องกรอกข้อมูลให้เอง
+  const q = document.getElementById('qtyRow'), t = (q && q.offsetParent !== null) ? q : document.querySelector('#orderBox .sum');
+  if (t) setTimeout(() => t.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }), 120);
+});
 $('minus').onclick = () => { if (qty > 1) { qty--; render(); } };
 $('plus').onclick  = () => { if (qty < MAX_QTY) { qty++; render(); } };
 document.querySelectorAll('[data-line]').forEach(a => a.href = LINE_URL);
