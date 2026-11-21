@@ -104,6 +104,23 @@ section{padding-block:clamp(2.5rem,1.8rem + 3vw,4.5rem)}
 .capture p{max-width:34rem;margin:0}
 .site-footer{border-top:1px solid var(--c-line);padding-block:2rem;font-size:.9375rem;color:var(--c-ink-soft)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+
+/* ===== ชุดสีเว็บ Piano Folder: Ink Navy + Ivory + ฟ้า + ทอง (พ.ย. 2026) =====
+   ฟ้า #2E5A80 = สีหลัก (ปุ่ม ลิงก์) · กรมท่า #1D2B46 = ตัวหนังสือ แถบเข้ม
+   Ivory #F6F4F0 = พื้นหน้า · ทอง = เน้นคำ เส้นใต้หัวข้อ (ไม่ใช้กับตัวหนังสือเล็ก) */
+:root{
+  --c-navy:#1D2B46; --c-ivory:#F6F4F0; --c-gold:#C99532;
+  --c-ink:#1D2B46; --c-ink-soft:#5A6478; --c-line:#E3E0D8; --c-shape:#D5DCE6;
+  --c-tint:#ECEAE4; --c-action:#2E5A80; --c-action-hover:#1D2B46;
+}
+body{background:var(--c-ivory)}
+.site-header{background:rgb(246 244 240 / .95)}
+h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--c-gold);margin:.7rem auto 0}
+.capture{background:var(--c-navy);color:var(--c-ivory)}
+.capture h2,.capture h3{color:#fff}
+.capture .hl{background:none;color:var(--c-sun)}
+.capture p,.capture .fine{color:rgb(246 244 240 / .82)}
+.capture a:not(.btn){color:var(--c-sun)}
 </style>
 </head>
 <body>
