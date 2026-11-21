@@ -97,6 +97,7 @@ section{padding-block:var(--section-y)}
 .song .th .pi{position:absolute;right:.5rem;bottom:.5rem;width:36px;height:36px;border-radius:50%;background:rgb(255 255 255 / .92);display:grid;place-items:center}
 .song .th .new{position:absolute;left:.5rem;top:.5rem;background:var(--c-sun);color:var(--c-ink);font-size:.78rem;font-weight:700;border-radius:var(--r-pill);padding:.05em .7em}
 .song .tx{padding:.6rem .8rem .75rem;line-height:1.45}
+.song .tx .note{font-size:.8em;font-weight:500;color:var(--c-ink-soft);white-space:nowrap}
 .song b{display:block;font-size:1rem}
 .song small{display:block;font-size:.85rem;color:var(--c-ink-soft)}
 .song .th .new--only{background:#fff;box-shadow:0 0 0 1px var(--c-line)}
@@ -226,16 +227,11 @@ h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2p
 .song--soon .th{background:linear-gradient(160deg,#E4E9F0,#D5DCE6)}
 .owner .steps li::before{background:var(--c-navy)}
 .acct{background:var(--c-ivory)}
-#why{background:var(--c-navy);color:var(--c-ivory)}
-#why h2{color:#fff}
-#why .hl{background:none;color:var(--c-sun)}
-#why .wcard{background:rgb(255 255 255 / .06);border-color:rgb(255 255 255 / .14)}
-#why .wcard b{color:#fff}
-#why .wcard p{color:rgb(246 244 240 / .75)}
-#why .wcard .wi{background:rgb(255 255 255 / .1)}
-#why .books-note{border-top-color:rgb(255 255 255 / .15);color:rgb(246 244 240 / .7)}
-#why .books-note b{color:#fff}
-#why .books-note a{color:var(--c-sun)}
+#why{background:linear-gradient(180deg,#E9F0F7 0%,var(--c-ivory) 100%)}
+#why .wcard{background:#fff;border:1px solid #DCE6F0;box-shadow:0 6px 20px rgb(46 90 128 / .06)}
+#why .wcard .wi{background:#E9F0F7}
+#why .books-note{border-top-color:#DCE6F0}
+#why .books-note a{color:var(--c-action)}
 </style>
 </head>
 <body>
@@ -501,8 +497,8 @@ const SONGS = [
   { t: 'บุพเพสันนิวาส', a: 'ไอซ์ ศรัณยู', yt: 'gXYbC9VtkAQ' },
   { t: 'คนสุดท้าย', a: 'อัสนี วสันต์', yt: 'JPfbj5IygX8' },
   { t: 'ออเจ้าเอย', a: 'Ost. บุพเพสันนิวาส', yt: '8WP-I-XqBg4' },
-  { t: 'วาฬเกยตื้น', a: 'GUNGUN', yt: '' },
-  { t: 'ลงใจ', a: 'BOWKYLION', yt: '' },
+  { t: 'วาฬเกยตื้น', note: 'ท่อนฮุก', a: 'GUNGUN', yt: '' },
+  { t: 'ลงใจ', note: 'ท่อนฮุก', a: 'BOWKYLION', yt: '' },
   { t: 'Right Here Waiting', a: 'Richard Marx', yt: 'Jg4xQKTgAUA' },
   { t: 'When You Say Nothing at All', a: 'Ronan Keating', yt: 'B3noHWSi70w' },
   { t: 'Fly Me to the Moon', a: 'Frank Sinatra', yt: '' },
@@ -547,7 +543,7 @@ $('intro').onclick = function(){
 const play = '<span class="pi"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#1B2F45"/></svg></span>';
 $('songList').innerHTML = SONGS.map((s, i) => {
   const badge = (s.isNew ? '<span class="new">เพลงใหม่</span>' : '') + (s.only ? '<span class="new new--only">มีเฉพาะคอร์สนี้</span>' : '');
-  const tx = '<span class="tx"><b>' + esc(s.t) + '</b><small>' + esc(s.a) + '</small></span>';
+  const tx = '<span class="tx"><b>' + esc(s.t) + (s.note ? ' <span class="note">(' + esc(s.note) + ')</span>' : '') + '</b><small>' + esc(s.a) + '</small></span>';
   if (!s.yt) return '<div class="song song--soon"><span class="th"><span class="soon">ตัวอย่างเร็ว ๆ นี้</span>' + badge + '</span>' + tx + '</div>';
   return '<button class="song" type="button" data-i="' + i + '" aria-label="ดูตัวอย่างเพลง ' + esc(s.t) + '">' +
     '<span class="th"><img src="' + thumb(s.yt) + '" alt="" loading="lazy" width="480" height="360">' + badge + play + '</span>' + tx + '</button>';
