@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic Piano by ครูแฟ้ม · คอร์สเปียโนออนไลน์ Piano Folder</title>
+<meta name="description" content="คอร์สเปียโนออนไลน์สำหรับมือใหม่ โดยครูแฟ้ม Piano Folder เริ่มจากศูนย์ จนเล่นเพลงที่คุณรู้จักและคุ้นหูได้ ครูเรียงเส้นทางไว้ให้แล้ว จบในคอร์สเดียว 19 บท">
+<meta property="og:title" content="Basic Piano · ครูแฟ้ม Piano Folder">
+<meta property="og:description" content="เริ่มจากศูนย์ จนเล่นเพลงที่คุณรู้จักและคุ้นหูได้ ครูเรียงเส้นทางไว้ให้แล้ว จบในคอร์สเดียว">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pianofolder.com/courses/basic/">
+<meta property="og:site_name" content="Piano Folder">
+<meta property="og:image" content="https://pianofolder.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap">
+<style>
+:root{
+  --c-tint:#EEF3F8;--c-ink:#1B2F45;--c-ink-soft:#52657A;--c-line:#DDE5EE;--c-shape:#C9D9E8;
+  --c-action:#2E5A80;--c-action-hover:#1B2F45;--c-sun:#F2D48A;--c-sun-deep:#C99532;
+  --c-green:#06C755;
+  --font-sans:"Plus Jakarta Sans","Anuphan","Noto Sans Thai","Leelawadee UI","Thonburi",system-ui,sans-serif;
+  --fs-display:clamp(2rem,1.4rem + 3vw,3.4rem);--fs-h2:clamp(1.6rem,1.25rem + 1.6vw,2.4rem);
+  --fs-small:.9375rem;--container:64rem;--section-y:clamp(3rem,2rem + 4vw,5.5rem);--gap:clamp(1rem,.6rem + 1.5vw,2rem);
+  --r-panel:28px;--r-card:20px;--r-media:14px;--r-pill:999px;--lift:0 14px 34px -16px rgb(27 47 69 / .35);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:#fff;color:var(--c-ink);font:400 1.125rem/1.8 var(--font-sans)}
+h1,h2,h3{margin:0 0 .5em;font-weight:700;line-height:1.35;text-wrap:balance}
+h1{font-size:var(--fs-display)}h2{font-size:var(--fs-h2)}h3{font-size:1.2rem}
+p{margin:0 0 1em}p,li{text-wrap:pretty}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--c-action);text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--c-ink);outline-offset:3px}
+.wrap{width:min(100% - 2rem,var(--container));margin-inline:auto}
+section{padding-block:var(--section-y)}
+.tint{background:var(--c-tint)}
+.nowrap{white-space:nowrap}.center{text-align:center}
+.hl{background:linear-gradient(transparent 56%,var(--c-sun) 56% 94%,transparent 94%);padding-inline:.12em;margin-inline:-.12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.fine{font-size:var(--fs-small);color:var(--c-ink-soft)}
+.eyebrow{display:block;font-weight:600;color:var(--c-action);margin-bottom:.4rem}
+.sub{color:var(--c-ink-soft);margin:.25rem auto 1.5rem;max-width:40rem}
+.narrow{max-width:44rem;margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:.75em 1.5em;border:0;border-radius:var(--r-pill);background:var(--c-action);color:#fff;font:700 1.02rem/1.3 var(--font-sans);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--c-action-hover)}
+.btn--quiet{background:#fff;color:var(--c-action);box-shadow:inset 0 0 0 2px currentColor}
+.btn--quiet:hover{background:var(--c-tint)}
+.btn--line{background:var(--c-green)}.btn--line:hover{background:#05a647}
+.btn--block{width:100%}
+
+.site-header{position:sticky;top:0;z-index:10;background:rgb(255 255 255 / .94);backdrop-filter:blur(6px);border-bottom:1px solid var(--c-line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:60px}
+.brand{font-weight:800;font-size:1.1rem;color:var(--c-ink);text-decoration:none;white-space:nowrap}
+.site-header .btn{min-height:40px;padding:.45em 1.1em;font-size:.95rem}
+
+/* hero */
+.hero .wrap{display:grid;gap:var(--gap);align-items:center}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:859px){.hero{padding-top:1.5rem}}
+.hero h1{margin-bottom:0}
+.by{font-size:var(--fs-small);font-weight:600;color:var(--c-ink-soft);margin:0 0 .6rem}
+.promise{font-size:clamp(1.25rem,1.1rem + .8vw,1.6rem);font-weight:700;line-height:1.5;margin-bottom:.75rem}
+.prices{display:flex;flex-wrap:wrap;gap:.6rem;margin:.75rem 0 1.2rem}
+.pchip{border:1px solid var(--c-line);border-radius:var(--r-card);padding:.55rem 1rem;line-height:1.45;background:#fff}
+.pchip b{display:block;font-size:1.5rem}
+.pchip span{font-size:var(--fs-small);color:var(--c-ink-soft)}
+.pchip--sun{background:#FFF8E6;border-color:var(--c-sun)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+@media (max-width:520px){.cta .btn{flex:1 1 100%}}
+
+.vid{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--r-panel);overflow:hidden;background:linear-gradient(160deg,#2E5A80,#1B2F45);box-shadow:var(--lift);cursor:pointer;border:0;padding:0;display:block}
+.vid img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.vid .play{position:absolute;inset:0;display:grid;place-items:center}
+.vid .play span{width:64px;height:64px;border-radius:50%;background:rgb(255 255 255 / .92);display:grid;place-items:center;box-shadow:0 6px 18px rgb(0 0 0 / .25)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-cap{font-size:var(--fs-small);color:var(--c-ink-soft);text-align:center;margin:.6rem 0 0}
+
+/* why */
+.why{display:grid;gap:var(--gap);margin-top:1.5rem}
+@media (min-width:860px){.why{grid-template-columns:repeat(3,1fr)}}
+.wcard{background:var(--c-tint);border-radius:var(--r-card);padding:1.4rem 1.3rem}
+.wcard .wi{display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:#fff;font-size:1.3rem;margin-bottom:.7rem}
+.wcard b{display:block;font-size:1.15rem;line-height:1.45;margin-bottom:.35rem}
+.wcard p{margin:0;color:var(--c-ink-soft);font-size:1rem;line-height:1.7}
+.books-note{max-width:44rem;margin:1.75rem auto 0;border-top:1px solid var(--c-line);padding-top:1.1rem;font-size:var(--fs-small);color:var(--c-ink-soft);text-align:center}
+.books-note b{display:block;color:var(--c-ink);margin-bottom:.2rem}
+.books-note p{margin:0}
+/* songs */
+.songs{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.songs{grid-template-columns:repeat(3,1fr)}}
+.song{border:0;padding:0;background:#fff;border-radius:var(--r-card);overflow:hidden;text-align:left;cursor:pointer;font:inherit;color:inherit;box-shadow:0 1px 0 var(--c-line),0 0 0 1px var(--c-line);display:flex;flex-direction:column}
+.song:hover{box-shadow:var(--lift),0 0 0 1px var(--c-line)}
+.song .th{position:relative;aspect-ratio:16/9;background:var(--c-shape)}
+.song .th img{width:100%;height:100%;object-fit:cover}
+.song .th .pi{position:absolute;right:.5rem;bottom:.5rem;width:36px;height:36px;border-radius:50%;background:rgb(255 255 255 / .92);display:grid;place-items:center}
+.song .th .new{position:absolute;left:.5rem;top:.5rem;background:var(--c-sun);color:var(--c-ink);font-size:.78rem;font-weight:700;border-radius:var(--r-pill);padding:.05em .7em}
+.song .tx{padding:.6rem .8rem .75rem;line-height:1.45}
+.song b{display:block;font-size:1rem}
+.song small{display:block;font-size:.85rem;color:var(--c-ink-soft)}
+.song .th .new--only{background:#fff;box-shadow:0 0 0 1px var(--c-line)}
+.song--soon{cursor:default}
+.song--soon:hover{box-shadow:0 1px 0 var(--c-line),0 0 0 1px var(--c-line)}
+.song--soon .th{background:linear-gradient(160deg,#DCE7F1,#C9D9E8);display:grid;place-items:center;padding-top:1.6rem}
+.song .soon{font-size:.85rem;font-weight:600;color:var(--c-ink-soft)}
+.extra{margin-top:1.25rem;background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:1rem 1.1rem}
+.extra b{display:block;margin-bottom:.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tag{background:var(--c-tint);border-radius:var(--r-pill);padding:.25em .9em;font-size:var(--fs-small);font-weight:600}
+.tag em{font-style:normal;font-weight:400;color:var(--c-ink-soft)}
+
+/* outline */
+.outline{display:grid;gap:.75rem;max-width:44rem;margin:1.5rem auto 0}
+.outline details{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:0 1.2rem}
+.outline summary{cursor:pointer;list-style:none;padding:1rem 0;font-weight:700;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.outline summary::-webkit-details-marker{display:none}
+.outline summary::after{content:"+";font-size:1.4rem;color:var(--c-action);line-height:1}
+.outline details[open] summary::after{content:"−"}
+@media (max-width:600px){.outline summary span{display:none}}
+.outline summary span{font-weight:400;font-size:var(--fs-small);color:var(--c-ink-soft)}
+.outline ol{margin:0 0 1rem;padding-left:2.2rem;display:grid;gap:.3rem;font-size:1rem;line-height:1.6}
+
+/* how */
+.facts{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin-top:1.5rem}
+.fact{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:1.25rem}
+.fact b{display:block;font-size:1.15rem;line-height:1.4;margin-bottom:.3rem}
+.fact p{margin:0;color:var(--c-ink-soft);font-size:1rem;line-height:1.7}
+.need{margin:1.5rem auto 0;max-width:44rem;background:#fff;border-radius:var(--r-card);border:1px dashed var(--c-shape);padding:1rem 1.2rem;font-size:1rem}
+.need p:last-child{margin:0}
+
+/* fit */
+.fit{display:grid;gap:var(--gap);margin-top:1.5rem}
+@media (min-width:760px){.fit{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:1.5rem}
+.box ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.box li{position:relative;padding-left:1.9rem;line-height:1.7}
+.box li::before{content:"✓";position:absolute;left:0;top:.15em;width:1.35rem;height:1.35rem;border-radius:50%;background:var(--c-tint);color:var(--c-action);font-size:.8rem;font-weight:800;display:grid;place-items:center}
+.box--next li::before{content:"→"}
+
+/* order */
+.order{display:grid;gap:var(--gap);align-items:start;margin-top:1.5rem}
+@media (min-width:860px){.order{grid-template-columns:1.15fr .85fr}}
+.pay{background:#fff;border-radius:var(--r-panel);padding:clamp(1.25rem,1rem + 2vw,2.25rem);box-shadow:var(--lift)}
+.sum{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--c-line);padding-bottom:.8rem;margin-bottom:1rem}
+.sum b{font-size:1.8rem}
+.steps{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;gap:.6rem;counter-reset:s;font-size:1rem}
+.steps li{counter-increment:s;position:relative;padding-left:2.4rem;line-height:1.7}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.05em;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--c-action);color:#fff;font-weight:700;font-size:.9rem;display:grid;place-items:center}
+.acct{background:var(--c-tint);border-radius:var(--r-media);padding:1rem 1.1rem;margin-bottom:1rem;line-height:1.7}
+.acct .no{display:block;font-size:1.35rem;font-weight:800;letter-spacing:.03em}
+.copy{margin-top:.5rem;min-height:40px;padding:.4em 1.1em;border-radius:var(--r-pill);border:2px solid var(--c-action);background:#fff;color:var(--c-action);font:700 .95rem var(--font-sans);cursor:pointer}
+.copy.done{background:var(--c-action);color:#fff}
+.owner{background:#FFF8E6;border:2px solid var(--c-sun);border-radius:var(--r-panel);padding:1.5rem}
+.owner .p{font-size:1.8rem;font-weight:800;line-height:1.3}
+.owner .p s{font-size:1.1rem;font-weight:400;color:var(--c-ink-soft);margin-left:.4rem}
+.owner .gift{font-weight:600;margin-bottom:1rem}
+.owner .steps li::before{background:var(--c-ink)}
+
+/* faq */
+.faq{max-width:44rem;margin:1.5rem auto 0;display:grid;gap:.6rem}
+.faq details{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:0 1.2rem}
+.faq summary{cursor:pointer;list-style:none;padding:1rem 0;font-weight:700;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;color:var(--c-action);line-height:1.2}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:0 0 1rem;font-size:1.02rem}
+
+.capture{background:var(--c-tint);border-radius:var(--r-panel);text-align:center;padding:clamp(1.5rem,1rem + 3vw,3.5rem);display:grid;justify-items:center;gap:.75rem}
+.capture p{max-width:34rem;margin:0}
+.site-footer{border-top:1px solid var(--c-line);padding-block:2rem;font-size:var(--fs-small);color:var(--c-ink-soft)}
+.site-footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+.site-footer nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+
+.player{position:fixed;inset:0;z-index:55;background:rgb(10 20 30 / .9);display:none;flex-direction:column;align-items:center;justify-content:center;padding:1rem}
+.player.open{display:flex}
+.player__bar{width:min(100%,960px);display:flex;justify-content:space-between;align-items:center;color:#fff;margin-bottom:.5rem;gap:1rem}
+.player__bar button{min-height:44px;padding:.3em 1.1em;border-radius:var(--r-pill);border:0;background:rgb(255 255 255 / .18);color:#fff;font:700 1rem var(--font-sans);cursor:pointer;white-space:nowrap}
+.player__frame{width:min(100%,960px);aspect-ratio:16/9;border-radius:var(--r-media);overflow:hidden;background:#000}
+.player__frame iframe{width:100%;height:100%;border:0;display:block}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);visibility:hidden;background:var(--c-ink);color:#fff;padding:.7rem 1.2rem;border-radius:var(--r-pill);font-size:.95rem;transition:transform .25s,visibility .25s;z-index:60}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span aria-hidden="true">←</span> Piano Folder</a>
+    <a class="btn" href="#order">สมัครเรียน</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">คอร์สเปียโนออนไลน์ · เริ่มจากศูนย์ 🎹</span>
+      <h1>Basic Piano</h1>
+      <p class="by">by ครูแฟ้ม · Piano Folder</p>
+      <p class="promise">เริ่มจากศูนย์ <span class="hl nowrap">จนเล่นเพลงที่คุณรู้จักได้</span></p>
+      <p>ครูแฟ้มเรียงเส้นทางไว้ให้แล้ว ตั้งแต่วางนิ้วครั้งแรก ไปจนเล่นเพลงที่คุณคุ้นหู ทั้งหมดจบในคอร์สเดียว 19 บท</p>
+      <div class="prices">
+        <div class="pchip"><b id="pFull"></b><span>คอร์สเต็ม · เรียนได้ไม่มีวันหมดอายุ</span></div>
+        <div class="pchip pchip--sun"><b id="pOwner"></b><span>มีหนังสือ รู้งี้...เล่นเปียโนได้นานแล้ว · แถมเพลงฟรี 1 เพลง</span></div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#order">สมัครเรียน</a>
+        <a class="btn btn--quiet" href="#songs">ดูเพลงในคอร์ส</a>
+      </div>
+    </div>
+    <div>
+      <button class="vid" id="intro" type="button" aria-label="เล่นคลิปแนะนำคอร์ส Basic Piano">
+        <img id="introThumb" alt="" width="480" height="360">
+        <span class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#1B2F45"/></svg></span></span>
+      </button>
+      <p class="vid-cap">คลิปแนะนำคอร์สจากครูแฟ้ม</p>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap narrow">
+    <h2 class="center"><span class="nowrap">ทำไมหลายคน</span><span class="hl nowrap">เรียนแล้วเลิก</span></h2>
+    <p>หลายคนเรียนเปียโนได้ไม่นานก็เลิก เพราะได้เล่นแต่เพลงในหนังสือเรียน ไม่ได้เล่นเพลงที่ตัวเองรู้จัก เรียนไปสักพักก็เบื่อ แล้วรู้สึกว่าเปียโนไม่สนุกอย่างที่คิด</p>
+    <p>คอร์สนี้เราไม่ต้องรอให้พื้นฐานครบ 100% แล้วค่อยเล่นเพลง เรียนพื้นฐานเท่าที่เพลงนั้นต้องใช้ แล้วเอามาเล่นเพลงเลย ทั้งสนุกกว่าและไปได้ไกลกว่าครับ</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center"><span class="nowrap">ทำไมต้อง</span> <span class="hl nowrap">Basic Piano</span></h2>
+    <div class="why">
+      <div class="wcard"><span class="wi" aria-hidden="true">🎵</span><b>ได้เล่นเพลงที่คุณรู้จักและคุ้นหู</b><p>ทั้งเพลงไทยและสากล 12 เพลง ไม่ใช่แค่เพลงฝึกในหนังสือเรียน</p></div>
+      <div class="wcard"><span class="wi" aria-hidden="true">🧭</span><b>ครูเรียงเส้นทางให้แล้ว</b><p>เริ่มจากศูนย์ จนเล่นเพลงที่คุณรู้จักได้ ครบในคอร์สเดียว ไม่ต้องเลือกเองว่าจะเรียนอะไรต่อ</p></div>
+      <div class="wcard"><span class="wi" aria-hidden="true">📚</span><b>แบบฝึกหัดละเอียด 19 บท</b><p>เพิ่มทักษะทีละอย่าง จนพร้อมไปต่อกับเพลงที่ยากขึ้น <span class="nowrap">(ระดับ Lv.3.5–4)</span></p></div>
+    </div>
+    <div class="books-note">
+      <b>ต่างจากหนังสือของครูแฟ้มยังไง?</b>
+      <p>หนังสือ <a href="/books/book1/">รู้งี้...เล่นเปียโนได้นานแล้ว</a> และ <a href="/books/book2/">ปลดล็อกเปียโน 2 มือ</a> เน้นเพลงพื้นฐานและเพลงบรรเลง ส่วน Basic Piano ได้เล่นเพลงที่คุณรู้จักและคุ้นหูด้วย และพาไปครบทั้งเส้นทางในคอร์สเดียว</p>
+    </div>
+  </div>
+</section>
+
+<section id="songs" class="tint">
+  <div class="wrap">
+    <h2 class="center"><span class="nowrap">เพลงที่</span><span class="hl nowrap">คุณจะได้เล่น</span></h2>
+    <p class="center sub">เริ่มจากเพลงพื้นฐานง่าย ๆ ก่อน แล้วไปต่อกับเพลงที่คุณรู้จักอีก 12 เพลง แตะที่เพลงเพื่อดูว่าเรียนจบแล้วจะเล่นได้แบบไหนครับ</p>
+    <div class="songs" id="songList"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center"><span class="nowrap">ครูเรียงให้แล้ว</span> <span class="hl nowrap">19 บท</span></h2>
+    <p class="center sub">แต่ละบทเพิ่มทักษะใหม่ทีละอย่าง เรียนจบบทหนึ่งแล้วไปบทต่อไปได้เลย</p>
+    <div class="outline">
+      <details open>
+        <summary>บทที่ 1–7 · เริ่มจากศูนย์ <span>วางนิ้ว อ่านโน้ต เล่น 2 มือ</span></summary>
+        <ol start="1">
+          <li>Introduction แนะนำคอร์สเรียน</li>
+          <li>พื้นฐานที่ต้องรู้ก่อนเล่นเปียโน</li>
+          <li>ฝึกอ่านโน้ต และเล่น 2 มือพร้อมกัน</li>
+          <li>การขยับตำแหน่งนิ้ว และการเล่น 2 มือ</li>
+          <li>เพิ่มความเร็วในการเล่น และรู้จักโน้ตเขบ็ต 1 ชั้น</li>
+          <li>เครื่องหมาย # (ชาร์ป) / b (แฟล็ต) และจังหวะ 3/4</li>
+          <li>ขั้นคู่ คอร์ด 3 โน้ต (Triad) และรูปแบบ Block Chord 1-3-5</li>
+        </ol>
+      </details>
+      <details>
+        <summary>บทที่ 8–14 · เล่นให้เพราะขึ้น <span>Pedal คอร์ด Scale</span></summary>
+        <ol start="8">
+          <li>การใช้ Sustain Pedal และการพลิกกลับคอร์ด (Chord Inversion)</li>
+          <li>เครื่องหมายประจุด (.) และการพลิกกลับคอร์ด (Chord Inversion)</li>
+          <li>รูปแบบ Broken Chord 1-3-5</li>
+          <li>Major Scale, Key เพลง และ Broken Chord 1-5-8</li>
+          <li>Octave (อ็อกเทฟ) และ 8va</li>
+          <li>นำทักษะต่าง ๆ มาเล่นรวมกันในบทเพลง</li>
+          <li>เครื่องหมาย Arpeggio (อาร์เปจโจ) และโน้ตเขบ็ต 2 ชั้น</li>
+        </ol>
+      </details>
+      <details>
+        <summary>บทที่ 15–19 · Bonus เพลงเต็ม <span>จบคอร์ส</span></summary>
+        <ol start="15">
+          <li>Bonus: River Flows in You</li>
+          <li>Bonus: Canon in C</li>
+          <li>Bonus: คนสุดท้าย (อัสนี วสันต์)</li>
+          <li>Bonus: ออเจ้าเอย</li>
+          <li>จบคอร์ส Basic Piano</li>
+        </ol>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <h2 class="center"><span class="nowrap">ในคอร์สนี้</span> <span class="hl nowrap">คุณจะได้อะไรบ้าง</span></h2>
+    <div class="facts">
+      <div class="fact"><b>🎬 เรียนทีละมือ ทีละท่อน ไม่หลงทาง</b><p>ทุกเพลงแบ่งเป็นคลิปสั้น มือขวา มือซ้าย แล้วค่อยรวมสองมือ ฟัง เล่นตาม และดูโน้ตไปพร้อมกัน</p></div>
+      <div class="fact"><b>🎼 โน้ตเรียบเรียงใหม่ ให้มือใหม่เล่นไหว</b><p>(Simplified Note) ทุกเพลงเป็นเวอร์ชันที่ครูแฟ้มเรียบเรียงใหม่สำหรับมือใหม่ ท่อนที่โน้ตยาก หรือจังหวะในต้นฉบับไม่ลงตัว ครูปรับให้ลงจังหวะและเล่นง่ายขึ้น</p></div>
+      <div class="fact"><b>📄 อ่านโน้ตไม่เป็น ก็เล่นตามได้</b><p>ทุกเพลงดาวน์โหลดโน้ตได้ 2 แบบ คือโน้ตบรรทัด 5 เส้นมาตรฐาน และโน้ตที่มีตัวอักษร C D E กำกับ</p></div>
+      <div class="fact"><b>🥁 ฝึกจังหวะไปกับดนตรีประกอบ</b><p>เล่นไปพร้อม Backing Track ช่วยให้จังหวะแม่นขึ้น</p></div>
+      <div class="fact"><b>📱 ส่งการบ้าน ครูแฟ้มตรวจให้</b><p>ถ่ายคลิปตอนเล่นส่งมาทาง LINE ไม่ต้องรอเล่นจบเพลง ส่งทีละท่อนได้เลย</p></div>
+      <div class="fact"><b>🔒 เรียนได้ตลอด ไม่มีวันหมดอายุ</b><p>เรียนในกลุ่ม Facebook ส่วนตัว ดูได้เฉพาะนักเรียน จะเรียนที่ไหน เมื่อไหร่ก็ได้</p></div>
+    </div>
+    <div class="need">
+      <p><strong>สิ่งที่ต้องมี:</strong> เปียโนหรือคีย์บอร์ด ใช้ได้ทั้ง 61 และ 88 คีย์ กับมือถือหรือแท็บเล็ตไว้ดูคลิป</p>
+      <p><strong>เรียนจบแล้วเล่นได้แบบไหน:</strong> ถ้าฝึกอย่างน้อยวันละ 15 นาทีอย่างสม่ำเสมอ คุณจะเล่นเพลงในคอร์สได้แบบในคลิปตัวอย่าง และพร้อมไปต่อกับเพลงที่ยากขึ้น <span class="nowrap">(ระดับ Lv.3.5–4)</span> ครับ</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center"><span class="nowrap">คอร์สนี้</span><span class="hl nowrap">เหมาะกับใคร</span></h2>
+    <div class="fit">
+      <div class="box">
+        <h3>เหมาะกับคุณ ถ้า...</h3>
+        <ul>
+          <li>ไม่เคยเล่นเปียโนมาก่อน อยากเริ่มจากศูนย์</li>
+          <li>อยากเล่นเพลงที่ตัวเองรู้จัก ไม่ใช่แค่เพลงในหนังสือเรียน</li>
+          <li>อยากมีทิศทางการฝึกเปียโนที่ชัดเจน เป็นระบบ และเห็นผลจนเล่นเพลงได้จริง</li>
+          <li>อ่านโน้ตไม่เป็น แต่อยากเล่นเป็นเพลงให้ได้</li>
+        </ul>
+      </div>
+      <div class="box box--next">
+        <h3>อยากลองก่อนด้วยงบที่น้อยกว่า</h3>
+        <ul>
+          <li>เริ่มจากหนังสือ <a href="/books/book1/"><strong>รู้งี้...เล่นเปียโนได้นานแล้ว</strong></a> ก่อนได้ครับ</li>
+          <li>เรียนจบหนังสือเล่มนี้แล้ว ค่อยมาต่อ Basic Piano ในราคาพิเศษสำหรับคนที่มีหนังสือ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="tint">
+  <div class="wrap">
+    <h2 class="center"><span class="hl nowrap">สมัครเรียน</span> <span class="nowrap">Basic Piano</span></h2>
+    <div class="order">
+      <div class="pay">
+        <h3>โอนตรงกับครูแฟ้ม</h3>
+        <p class="fine" style="margin:0 0 .8rem">มีหนังสือ รู้งี้...เล่นเปียโนได้นานแล้ว อยู่แล้ว? <a href="#owner" style="font-weight:700">ดูราคาพิเศษก่อนโอน</a></p>
+        <div class="sum"><span>คอร์ส Basic Piano</span><b id="sumFull"></b></div>
+        <ol class="steps">
+          <li>คัดลอกเลขบัญชี แล้วโอนตามยอดด้านบน</li>
+          <li>กดปุ่มสีเขียว LINE จะเปิดพร้อมข้อความสมัครเรียน กดส่งได้เลย</li>
+          <li>ส่งสลิปต่อในแชทเดียวกัน ทีมครูแฟ้มส่งลิงก์เข้ากลุ่มเรียนให้ครับ</li>
+        </ol>
+        <div class="acct" id="acct"></div>
+        <a class="btn btn--line btn--block" id="orderBtn" href="#" target="_blank" rel="noopener">ส่งใบสมัครทาง LINE</a>
+        <p class="fine center" style="margin:.75rem 0 0">โอนตรง ต้องเป็นบัญชีชื่อ <strong id="gName" class="nowrap"></strong> เท่านั้น</p>
+      </div>
+      <div class="owner" id="owner" style="scroll-margin-top:80px">
+        <h3>มีหนังสือ <span class="nowrap">รู้งี้...เล่นเปียโนได้นานแล้ว</span> อยู่แล้ว?</h3>
+        <p class="p"><span id="ownerP"></span><s id="ownerFull"></s></p>
+        <p class="gift">🎁 แถมเลือกคอร์ส Piano Collection ฟรีอีก 1 เพลง</p>
+        <ol class="steps">
+          <li>ยังไม่ต้องโอนครับ กดปุ่มด้านล่าง LINE จะเปิดพร้อมข้อความ PF1BASIC</li>
+          <li>ส่งรูปหนังสือ <strong>รู้งี้...เล่นเปียโนได้นานแล้ว</strong> ของคุณในแชท</li>
+          <li>ทีมครูแฟ้มส่งรายละเอียดการโอนกลับไปให้ครับ</li>
+        </ol>
+        <a class="btn btn--line btn--block" id="ownerBtn" href="#" target="_blank" rel="noopener">รับราคาพิเศษทาง LINE</a>
+        <p class="fine" style="margin:.75rem 0 0">เพลงแถมเลือกได้ทุกเพลงใน <a href="/piano-collection/">Piano Collection</a> ยกเว้นเพลงที่มีอยู่ในคอร์สนี้แล้ว ราคาพิเศษนี้ให้เพราะช่วงแรกของคอร์สเป็นเพลงพื้นฐานชุดเดียวกับในหนังสือ รู้งี้...เล่นเปียโนได้นานแล้ว</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center"><span class="nowrap">คำถาม</span><span class="hl nowrap">ที่พบบ่อย</span></h2>
+    <div class="faq">
+      <details><summary>อ่านโน้ตไม่เป็น เรียนได้ไหม</summary><p>ได้ครับ โน้ตทุกเพลงมีตัวอักษร C D E กำกับ เล่นเป็นเพลงได้กับอ่านโน้ตได้เป็นคนละเรื่องกัน ระหว่างเรียนคุณจะค่อย ๆ อ่านโน้ตได้เองไปด้วย</p></details>
+      <details><summary>อายุ 40–50 แล้ว ไม่มีพื้นฐานเลย ยังทันไหม</summary><p>ทันแน่นอนครับ และได้เปรียบด้วย เพราะผู้ใหญ่รู้ว่าชอบเพลงไหนและมีเป้าหมายชัด อาจเรียนไม่ไวเท่าเด็ก แต่ถ้าซ้อมสม่ำเสมอ เล่นได้แน่นอน</p></details>
+      <details><summary>มีหนังสือ รู้งี้...เล่นเปียโนได้นานแล้ว อยู่แล้ว จะเรียนซ้ำไหม</summary><p>ช่วงแรกของคอร์สเป็นเพลงพื้นฐานชุดเดียวกับในหนังสือเล่มนี้ คนที่มีหนังสืออยู่แล้วจึงได้ราคาพิเศษ <span data-owner-price></span> พร้อมเพลงแถม 1 เพลง ส่วนที่เหลือของคอร์สเป็นแบบฝึกหัดและเพลงที่ไม่มีในหนังสือครับ</p></details>
+      <details><summary>มีหนังสือ ปลดล็อกเปียโน 2 มือ อยู่แล้ว ควรเรียนไหม</summary><p>เพลง Für Elise, River Flows in You และ Canon in C ซ้ำกับในหนังสือ ปลดล็อกเปียโน 2 มือ ถ้าอยากเล่นเพลงที่คุณรู้จักเพิ่ม <a data-line href="#" target="_blank" rel="noopener">ทักมาใน LINE</a> ได้เลยครับ ครูแฟ้มช่วยดูให้ว่าเรียน Basic Piano หรือเลือกเพลงใน Piano Collection แบบไหนคุ้มกว่า</p></details>
+      <details><summary>เรียน Basic Piano แล้ว ต้องซื้อหนังสือ ปลดล็อกเปียโน 2 มือ ไหม</summary><p>ไม่ต้องครับ เพลงในหนังสือเล่มนั้นมีอยู่ในคอร์สแล้ว 3 ใน 5 เพลง</p></details>
+      <details><summary>ยังไม่มีเปียโน เริ่มเรียนก่อนได้ไหม</summary><p>แนะนำให้มีเปียโนก่อนครับ เหมือนเรียนขับรถแต่ไม่มีรถให้หัด ครูสอนเก่งแค่ไหนก็ยากที่จะขับเป็น ใช้ได้ทั้ง 61 และ 88 คีย์ เครื่องเก่าก็ได้ ขอแค่กดแล้วเสียงไม่เพี้ยน</p></details>
+      <details><summary>ต้องซ้อมวันละเท่าไหร่</summary><p>อย่างน้อยวันละ 15 นาทีครับ ซ้อมสั้นแต่สม่ำเสมอ ได้ผลกว่าซ้อมนานแต่นาน ๆ ที</p></details>
+      <details><summary>เรียนได้นานแค่ไหน</summary><p>คอร์สไม่มีวันหมดอายุ กลับมาดูซ้ำได้ตลอดครับ</p></details>
+      <details><summary>ติดตรงไหน ถามได้ไหม</summary><p>ได้ครับ ถ่ายคลิปตอนเล่นส่งมาให้ครูแฟ้มตรวจทาง LINE ส่งทีละท่อนได้เลย ยิ่งส่งบ่อย ยิ่งมีโอกาสเล่นได้เร็วขึ้น</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="capture">
+      <h2><span class="nowrap">มีคำถาม?</span> <span class="hl nowrap">ทักครูใน LINE</span></h2>
+      <p>ไม่แน่ใจว่าควรเริ่มจากหนังสือหรือคอร์ส ทักมาถามได้เลยครับ</p>
+      <a class="btn btn--line" data-line href="#" target="_blank" rel="noopener" style="min-height:56px">ทักครูแฟ้มใน LINE @PianoFolder</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong style="color:var(--c-ink)">Piano Folder</strong> · © <span id="yr">2026</span></div>
+    <nav><a href="/">หน้าแรก</a><a href="/books/">หนังสือ</a><a href="/piano-collection/">Piano Collection</a><a data-line href="#">LINE</a></nav>
+  </div>
+</footer>
+
+<div class="player" id="player" role="dialog" aria-modal="true" aria-label="คลิปตัวอย่าง">
+  <div class="player__bar"><b id="playerTitle"></b><button type="button" id="playerClose" aria-label="ปิด">✕ ปิด</button></div>
+  <div class="player__frame" id="playerFrame"></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== ตั้งค่า (แก้ตรงนี้ที่เดียว) ===== */
+const COURSE    = 'Basic Piano';
+const PRICE     = { full: 4800, owner: 3990 };  // ราคาเต็ม / คนที่มีเล่ม 1
+const OWNER_KEY = 'PF1BASIC';                    // คีย์เวิร์ด LINE สำหรับคนที่มีเล่ม 1
+const INTRO_YT  = '5ceQ57SZlAk';                 // คลิปแนะนำคอร์ส
+const LINE_ID   = '@PianoFolder';
+const LINE_URL  = 'https://lin.ee/Nd6pxlW';
+const PAY = { bank: 'ธนาคารกรุงเทพ', no: '5620686732', show: '562-0-68673-2', name: 'นาย สุรัฐ อชิรเสนา' };
+/* เพลงในคอร์ส (เรียงตามที่แสดง)
+   yt: รหัสคลิปตัวอย่าง YouTube · ใส่ '' ไว้ = ขึ้น "ตัวอย่างเร็ว ๆ นี้"
+   isNew: true = ป้าย "เพลงใหม่" · only: true = ป้าย "มีเฉพาะคอร์สนี้" */
+const SONGS = [
+  { t: 'ลม', a: 'KaLa', yt: '9UK81bkoBZE' },
+  { t: 'บุพเพสันนิวาส', a: 'ไอซ์ ศรัณยู', yt: 'gXYbC9VtkAQ' },
+  { t: 'คนสุดท้าย', a: 'อัสนี วสันต์', yt: 'JPfbj5IygX8', isNew: true },
+  { t: 'ออเจ้าเอย', a: 'Ost. บุพเพสันนิวาส', yt: '8WP-I-XqBg4', isNew: true },
+  { t: 'วาฬเกยตื้น', a: 'GUNGUN', yt: '', only: true },
+  { t: 'ลงใจ', a: 'BOWKYLION', yt: '', only: true },
+  { t: 'Right Here Waiting', a: 'Richard Marx', yt: 'Jg4xQKTgAUA' },
+  { t: 'When You Say Nothing at All', a: 'Ronan Keating', yt: 'B3noHWSi70w' },
+  { t: 'Fly Me to the Moon', a: 'Frank Sinatra', yt: '', only: true },
+  { t: 'Für Elise', a: 'Beethoven', yt: 'nxs96uKdwh4' },
+  { t: 'River Flows in You', a: 'Yiruma', yt: 'he4jE87hSuE' },
+  { t: 'Canon in C', a: 'Pachelbel', yt: 'vl9-RTx3iI4' }
+];
+/* ===================================== */
+
+const $ = id => document.getElementById(id);
+const fmt = n => '฿' + n.toLocaleString('th-TH');
+const lineMsg = t => 'https://line.me/R/oaMessage/' + encodeURIComponent(LINE_ID) + '/?' + encodeURIComponent(t);
+const thumb = id => 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+$('pFull').textContent = $('sumFull').textContent = $('ownerFull').textContent = fmt(PRICE.full);
+$('pOwner').textContent = $('ownerP').textContent = fmt(PRICE.owner);
+document.querySelectorAll('[data-owner-price]').forEach(el => el.textContent = fmt(PRICE.owner));
+document.querySelectorAll('[data-line]').forEach(a => a.href = LINE_URL);
+$('gName').textContent = PAY.name;
+$('yr').textContent = new Date().getFullYear();
+$('acct').innerHTML = PAY.bank + '<span class="no">' + PAY.show + '</span>' + PAY.name +
+  '<br><button class="copy" id="copyBtn" type="button">คัดลอกเลขบัญชี</button>';
+$('orderBtn').href = lineMsg('สมัครเรียนคอร์ส ' + COURSE + '\nยอดโอน ' + fmt(PRICE.full));
+$('ownerBtn').href = lineMsg(OWNER_KEY);
+
+function toast(t){ const el = $('toast'); el.textContent = t; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2200); }
+$('copyBtn').onclick = () => {
+  const done = () => { $('copyBtn').textContent = '✓ คัดลอกแล้ว'; $('copyBtn').classList.add('done'); toast('คัดลอกเลขบัญชีแล้ว ' + PAY.show); };
+  if (navigator.clipboard) navigator.clipboard.writeText(PAY.no).then(done, () => toast('คัดลอกไม่ได้ กรุณาจดเลข ' + PAY.show));
+  else toast('กรุณาจดเลข ' + PAY.show);
+};
+
+/* คลิปแนะนำ: โหลดเมื่อกดเท่านั้น */
+$('introThumb').src = thumb(INTRO_YT);
+$('intro').onclick = function(){
+  if (this.dataset.on) return; this.dataset.on = 1;
+  this.insertAdjacentHTML('beforeend', '<iframe src="https://www.youtube-nocookie.com/embed/' + INTRO_YT + '?autoplay=1&rel=0&playsinline=1" title="แนะนำคอร์ส Basic Piano" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>');
+};
+
+/* การ์ดเพลง + ตัวเล่นคลิป */
+const play = '<span class="pi"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#1B2F45"/></svg></span>';
+$('songList').innerHTML = SONGS.map((s, i) => {
+  const badge = (s.isNew ? '<span class="new">เพลงใหม่</span>' : '') + (s.only ? '<span class="new new--only">มีเฉพาะคอร์สนี้</span>' : '');
+  const tx = '<span class="tx"><b>' + esc(s.t) + '</b><small>' + esc(s.a) + '</small></span>';
+  if (!s.yt) return '<div class="song song--soon"><span class="th"><span class="soon">ตัวอย่างเร็ว ๆ นี้</span>' + badge + '</span>' + tx + '</div>';
+  return '<button class="song" type="button" data-i="' + i + '" aria-label="ดูตัวอย่างเพลง ' + esc(s.t) + '">' +
+    '<span class="th"><img src="' + thumb(s.yt) + '" alt="" loading="lazy" width="480" height="360">' + badge + play + '</span>' + tx + '</button>';
+}).join('');
+const closePlayer = () => { $('player').classList.remove('open'); $('playerFrame').innerHTML = ''; document.body.style.overflow = ''; };
+document.querySelectorAll('button.song').forEach(b => b.onclick = () => {
+  const s = SONGS[b.dataset.i];
+  $('playerTitle').textContent = s.t;
+  $('playerFrame').innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + s.yt + '?autoplay=1&rel=0&playsinline=1" title="' + esc(s.t) + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+  $('player').classList.add('open'); document.body.style.overflow = 'hidden';
+});
+$('playerClose').onclick = closePlayer;
+$('player').onclick = e => { if (e.target === $('player')) closePlayer(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePlayer(); });
+</script>
+</body>
+</html>
