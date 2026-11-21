@@ -54,6 +54,7 @@ section{padding-block:var(--section-y)}
 .btn--quiet{background:#fff;color:var(--c-action);box-shadow:inset 0 0 0 2px currentColor}
 .btn--quiet:hover{background:var(--c-tint)}
 .btn--line{background:var(--c-green)}.btn--line:hover{background:#05a647}
+.btn--shopee{background:#EE4D2D}.btn--shopee:hover{background:#c73d22}
 .btn--block{width:100%}
 
 #orderBox .sum,#qtyRow{scroll-margin-top:84px}
@@ -291,6 +292,7 @@ h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2p
       <div class="pricebox" id="heroPrice"></div>
       <div class="cta">
         <a class="btn" href="#order" data-t="ctaLong">สั่งจองทาง LINE</a>
+        <a class="btn btn--shopee" data-shopee href="#" target="_blank" rel="noopener">ซื้อใน Shopee</a>
         <button class="btn btn--quiet" type="button" data-flip>📖 เปิดอ่านตัวอย่างหนังสือ</button>
         <div class="oldpro"><span class="ic" aria-hidden="true">🎁</span><div><b class="t">มีหนังสือ “รู้งี้...เล่นเปียโนได้นานแล้ว” อยู่แล้ว?</b>ซื้อเล่มนี้ รับ<strong>คอร์ส Piano Collection ฟรี 1 เพลง</strong> <span class="nowrap">(มูลค่า ฿490)</span><small>เลือกเพลงที่ชอบได้เอง · ใช้ได้ทั้งเล่มจริงและ E-Book · แจ้งครูในแชท LINE ตอนส่งสลิป</small></div></div>
       </div>
@@ -490,6 +492,10 @@ h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2p
         <h3>อยากถามก่อนสั่ง?</h3>
         <p>ไม่แน่ใจว่าเล่มนี้เหมาะกับคุณไหม หรืออยากสั่งหลายเล่ม ทักครูแฟ้มใน LINE ได้เลยครับ</p>
         <a class="btn btn--line btn--block" data-line href="#" target="_blank" rel="noopener">ทักครูแฟ้มใน LINE</a>
+        <hr style="border:0;border-top:1px solid var(--c-line);margin:1.25rem 0">
+        <h3>ซื้อผ่าน Shopee</h3>
+        <p>หนังสือเล่มจริง สะดวกจ่ายผ่านแอป</p>
+        <a class="btn btn--shopee btn--block" data-shopee href="#" target="_blank" rel="noopener">ไปที่ Shopee</a>
       </div>
     </div>
   </div>
@@ -525,7 +531,7 @@ h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2p
 <footer class="site-footer">
   <div class="wrap">
     <div><strong style="color:var(--c-ink)">Piano Folder</strong> · © <span id="yr">2026</span></div>
-    <nav><a href="https://pianofolder.com/">หน้าแรก</a><a href="/books/">หนังสือทั้งหมด</a><a data-line href="#">LINE</a></nav>
+    <nav><a href="https://pianofolder.com/">หน้าแรก</a><a href="/books/">หนังสือทั้งหมด</a><a data-line href="#">LINE</a><a data-shopee href="#">Shopee</a></nav>
   </div>
 </footer>
 
@@ -558,6 +564,7 @@ const ORDER_URL = 'https://script.google.com/macros/s/AKfycbxJfBj2O5a3wKKHa8e--H
 const FLIPBOOK = 'https://heyzine.com/flip-book/b28a05a871.html';   // ตัวอย่างหนังสือ (Heyzine)
 const LINE_ID  = '@PianoFolder';
 const LINE_URL = 'https://lin.ee/Nd6pxlW';
+const SHOPEE   = 'https://s.shopee.co.th/5fqVE06zTv';
 const PAY = { bank: 'ธนาคารกรุงเทพ', no: '5620686732', show: '562-0-68673-2', name: 'นาย สุรัฐ อชิรเสนา' };
 /* ===================================== */
 
@@ -718,6 +725,7 @@ document.querySelectorAll('.fmt').forEach(b => b.onclick = () => {
 $('minus').onclick = () => { if (qty > 1) { qty--; render(); } };
 $('plus').onclick  = () => { if (qty < MAX_QTY) { qty++; render(); } };
 document.querySelectorAll('[data-line]').forEach(a => a.href = LINE_URL);
+document.querySelectorAll('[data-shopee]').forEach(a => a.href = SHOPEE);
 $('notify').href = lineMsg('ขอรับแจ้งเตือนเมื่อเปิดพรีเซล หนังสือ ' + BOOK);
 $('gName').textContent = PAY.name;
 $('yr').textContent = new Date().getFullYear();
