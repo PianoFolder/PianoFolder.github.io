@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เล่นเปียโน + ร้องเพลง by ครูแฟ้ม · คอร์สเปียโนออนไลน์ Piano Folder</title>
+<meta name="description" content="คอร์สเล่นเปียโน + ร้องเพลง ออนไลน์ โดยครูแฟ้ม Piano Folder เข้าใจคอร์ดกับจังหวะ ผ่านเพลงดังที่คุณร้องตามได้ แล้วเอาไปเล่นคลอเพลงที่คุณชอบได้เอง ไม่ต้องมีพื้นฐาน">
+<meta property="og:title" content="เล่นเปียโน + ร้องเพลง · ครูแฟ้ม Piano Folder">
+<meta property="og:description" content="เล่นเปียโนคลอ แล้วร้องเพลงที่คุณชอบได้เอง เข้าใจคอร์ดกับจังหวะ ไม่ต้องมีพื้นฐาน">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pianofolder.com/courses/piano-singing/">
+<meta property="og:site_name" content="Piano Folder">
+<meta property="og:image" content="https://pianofolder.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap">
+<style>
+:root{
+  --c-tint:#EEF3F8;--c-ink:#1B2F45;--c-ink-soft:#52657A;--c-line:#DDE5EE;--c-shape:#C9D9E8;
+  --c-action:#2E5A80;--c-action-hover:#1B2F45;--c-sun:#F2D48A;--c-sun-deep:#C99532;
+  --c-green:#06C755;
+  --font-sans:"Plus Jakarta Sans","Anuphan","Noto Sans Thai","Leelawadee UI","Thonburi",system-ui,sans-serif;
+  --fs-display:clamp(2rem,1.4rem + 3vw,3.4rem);--fs-h2:clamp(1.6rem,1.25rem + 1.6vw,2.4rem);
+  --fs-small:.9375rem;--container:64rem;--section-y:clamp(3rem,2rem + 4vw,5.5rem);--gap:clamp(1rem,.6rem + 1.5vw,2rem);
+  --r-panel:28px;--r-card:20px;--r-media:14px;--r-pill:999px;--lift:0 14px 34px -16px rgb(27 47 69 / .35);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:#fff;color:var(--c-ink);font:400 1.125rem/1.8 var(--font-sans)}
+h1,h2,h3{margin:0 0 .5em;font-weight:700;line-height:1.35;text-wrap:balance}
+h1{font-size:var(--fs-display)}h2{font-size:var(--fs-h2)}h3{font-size:1.2rem}
+p{margin:0 0 1em}p,li{text-wrap:pretty}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--c-action);text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--c-ink);outline-offset:3px}
+.wrap{width:min(100% - 2rem,var(--container));margin-inline:auto}
+section{padding-block:var(--section-y)}
+.tint{background:var(--c-tint)}
+.nowrap{white-space:nowrap}.center{text-align:center}
+.hl{background:linear-gradient(transparent 56%,var(--c-sun) 56% 94%,transparent 94%);padding-inline:.12em;margin-inline:-.12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.fine{font-size:var(--fs-small);color:var(--c-ink-soft)}
+.eyebrow{display:block;font-weight:600;color:var(--c-action);margin-bottom:.4rem}
+.sub{color:var(--c-ink-soft);margin:.25rem auto 1.5rem;max-width:40rem}
+.narrow{max-width:44rem;margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:.75em 1.5em;border:0;border-radius:var(--r-pill);background:var(--c-action);color:#fff;font:700 1.02rem/1.3 var(--font-sans);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--c-action-hover)}
+.btn--quiet{background:#fff;color:var(--c-action);box-shadow:inset 0 0 0 2px currentColor}
+.btn--quiet:hover{background:var(--c-tint)}
+.btn--line{background:var(--c-green)}.btn--line:hover{background:#05a647}
+.btn--block{width:100%}
+
+.site-header{position:sticky;top:0;z-index:10;background:rgb(255 255 255 / .94);backdrop-filter:blur(6px);border-bottom:1px solid var(--c-line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:60px}
+.brand{font-weight:800;font-size:1.1rem;color:var(--c-ink);text-decoration:none;white-space:nowrap}
+.site-header .btn{min-height:40px;padding:.45em 1.1em;font-size:.95rem}
+
+/* hero */
+.hero .wrap{display:grid;gap:var(--gap);align-items:center}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:859px){.hero{padding-top:1.5rem}}
+.hero h1{margin-bottom:0}
+.by{font-size:var(--fs-small);font-weight:600;color:var(--c-ink-soft);margin:0 0 .6rem}
+.promise{font-size:clamp(1.25rem,1.1rem + .8vw,1.6rem);font-weight:700;line-height:1.5;margin-bottom:.75rem}
+.prices{display:flex;flex-wrap:wrap;gap:.6rem;margin:.75rem 0 1.2rem}
+.pchip{border:1px solid var(--c-line);border-radius:var(--r-card);padding:.55rem 1rem;line-height:1.45;background:#fff}
+.pchip b{display:block;font-size:1.5rem}
+.pchip span{font-size:var(--fs-small);color:var(--c-ink-soft)}
+.pchip--sun{background:#FFF8E6;border-color:var(--c-sun)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+@media (max-width:520px){.cta .btn{flex:1 1 100%}}
+
+.vid{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--r-panel);overflow:hidden;background:linear-gradient(160deg,#2E5A80,#1B2F45);box-shadow:var(--lift);cursor:pointer;border:0;padding:0;display:block}
+.vid img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.vid .play{position:absolute;inset:0;display:grid;place-items:center}
+.vid .play span{width:64px;height:64px;border-radius:50%;background:rgb(255 255 255 / .92);display:grid;place-items:center;box-shadow:0 6px 18px rgb(0 0 0 / .25)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-cap{font-size:var(--fs-small);color:var(--c-ink-soft);text-align:center;margin:.6rem 0 0}
+
+/* why */
+.why{display:grid;gap:var(--gap);margin-top:1.5rem}
+@media (min-width:860px){.why{grid-template-columns:repeat(3,1fr)}}
+.wcard{background:var(--c-tint);border-radius:var(--r-card);padding:1.4rem 1.3rem}
+.wcard .wi{display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:#fff;font-size:1.3rem;margin-bottom:.7rem}
+.wcard b{display:block;font-size:1.15rem;line-height:1.45;margin-bottom:.35rem}
+.wcard p{margin:0;color:var(--c-ink-soft);font-size:1rem;line-height:1.7}
+.books-note{max-width:44rem;margin:1.75rem auto 0;border-top:1px solid var(--c-line);padding-top:1.1rem;font-size:var(--fs-small);color:var(--c-ink-soft);text-align:center}
+.books-note b{display:block;color:var(--c-ink);margin-bottom:.2rem}
+.books-note p{margin:0}
+/* songs */
+.songs{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.songs{grid-template-columns:repeat(3,1fr)}}
+.song{border:0;padding:0;background:#fff;border-radius:var(--r-card);overflow:hidden;text-align:left;cursor:pointer;font:inherit;color:inherit;box-shadow:0 1px 0 var(--c-line),0 0 0 1px var(--c-line);display:flex;flex-direction:column}
+.song:hover{box-shadow:var(--lift),0 0 0 1px var(--c-line)}
+.song .th{position:relative;aspect-ratio:16/9;background:var(--c-shape)}
+.song .th img{width:100%;height:100%;object-fit:cover}
+.song .th .pi{position:absolute;right:.5rem;bottom:.5rem;width:36px;height:36px;border-radius:50%;background:rgb(255 255 255 / .92);display:grid;place-items:center}
+.song .th .new{position:absolute;left:.5rem;top:.5rem;background:var(--c-sun);color:var(--c-ink);font-size:.78rem;font-weight:700;border-radius:var(--r-pill);padding:.05em .7em}
+.song .tx{padding:.6rem .8rem .75rem;line-height:1.45}
+.song .tx .note{font-size:.8em;font-weight:500;color:var(--c-ink-soft);white-space:nowrap}
+.song b{display:block;font-size:1rem}
+.song small{display:block;font-size:.85rem;color:var(--c-ink-soft)}
+.song .th .new--only{background:#fff;box-shadow:0 0 0 1px var(--c-line)}
+.song--soon{cursor:default}
+.song--soon:hover{box-shadow:0 1px 0 var(--c-line),0 0 0 1px var(--c-line)}
+.song--soon .th{background:linear-gradient(160deg,#DCE7F1,#C9D9E8);display:grid;place-items:center;padding-top:1.6rem}
+.song .soon{font-size:.85rem;font-weight:600;color:var(--c-ink-soft)}
+.extra{margin-top:1.25rem;background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:1rem 1.1rem}
+.extra b{display:block;margin-bottom:.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tag{background:var(--c-tint);border-radius:var(--r-pill);padding:.25em .9em;font-size:var(--fs-small);font-weight:600}
+.tag em{font-style:normal;font-weight:400;color:var(--c-ink-soft)}
+
+/* outline */
+.outline{display:grid;gap:.75rem;max-width:44rem;margin:1.5rem auto 0}
+.outline details{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:0 1.2rem}
+.outline summary{cursor:pointer;list-style:none;padding:1rem 0;font-weight:700;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.outline summary::-webkit-details-marker{display:none}
+.outline summary::after{content:"+";font-size:1.4rem;color:var(--c-action);line-height:1}
+.outline details[open] summary::after{content:"−"}
+@media (max-width:600px){.outline summary span{display:none}}
+.outline summary span{font-weight:400;font-size:var(--fs-small);color:var(--c-ink-soft)}
+.outline ol{margin:0 0 1rem;padding-left:2.2rem;display:grid;gap:.3rem;font-size:1rem;line-height:1.6}
+
+/* how */
+.facts{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin-top:1.5rem}
+.fact{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:1.25rem}
+.fact b{display:block;font-size:1.15rem;line-height:1.4;margin-bottom:.3rem}
+.fact p{margin:0;color:var(--c-ink-soft);font-size:1rem;line-height:1.7}
+.need{margin:1.5rem auto 0;max-width:44rem;background:#fff;border-radius:var(--r-card);border:1px dashed var(--c-shape);padding:1rem 1.2rem;font-size:1rem}
+.need p:last-child{margin:0}
+
+/* fit */
+.fit{display:grid;gap:var(--gap);margin-top:1.5rem}
+@media (min-width:760px){.fit{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:1.5rem}
+.box ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.box li{position:relative;padding-left:1.9rem;line-height:1.7}
+.box li::before{content:"✓";position:absolute;left:0;top:.15em;width:1.35rem;height:1.35rem;border-radius:50%;background:var(--c-tint);color:var(--c-action);font-size:.8rem;font-weight:800;display:grid;place-items:center}
+.box--next li::before{content:"→"}
+
+/* order */
+.order{display:grid;gap:var(--gap);align-items:start;margin-top:1.5rem}
+@media (min-width:860px){.order{grid-template-columns:1.15fr .85fr}}
+.pay{background:#fff;border-radius:var(--r-panel);padding:clamp(1.25rem,1rem + 2vw,2.25rem);box-shadow:var(--lift)}
+.sum{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--c-line);padding-bottom:.8rem;margin-bottom:1rem}
+.sum b{font-size:1.8rem}
+.steps{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;gap:.6rem;counter-reset:s;font-size:1rem}
+.steps li{counter-increment:s;position:relative;padding-left:2.4rem;line-height:1.7}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.05em;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--c-action);color:#fff;font-weight:700;font-size:.9rem;display:grid;place-items:center}
+.acct{background:var(--c-tint);border-radius:var(--r-media);padding:1rem 1.1rem;margin-bottom:1rem;line-height:1.7}
+.acct .no{display:block;font-size:1.35rem;font-weight:800;letter-spacing:.03em}
+.copy{margin-top:.5rem;min-height:40px;padding:.4em 1.1em;border-radius:var(--r-pill);border:2px solid var(--c-action);background:#fff;color:var(--c-action);font:700 .95rem var(--font-sans);cursor:pointer}
+.copy.done{background:var(--c-action);color:#fff}
+.owner{background:#FFF8E6;border:2px solid var(--c-sun);border-radius:var(--r-panel);padding:1.5rem}
+.owner .p{font-size:1.8rem;font-weight:800;line-height:1.3}
+.owner .p s{font-size:1.1rem;font-weight:400;color:var(--c-ink-soft);margin-left:.4rem}
+.owner .gift{font-weight:600;margin-bottom:1rem}
+.owner .steps li::before{background:var(--c-ink)}
+
+/* faq */
+.faq details,.outline details{min-width:0}
+.faq{max-width:44rem;margin:1.5rem auto 0;display:grid;gap:.6rem}
+.faq details{background:#fff;border:1px solid var(--c-line);border-radius:var(--r-card);padding:0 1.2rem}
+.faq summary{cursor:pointer;list-style:none;padding:1rem 0;font-weight:700;display:flex;justify-content:space-between;gap:1rem}
+.faq summary>span{min-width:0}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;color:var(--c-action);line-height:1.2}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:0 0 1rem;font-size:1.02rem}
+
+.capture{background:var(--c-tint);border-radius:var(--r-panel);text-align:center;padding:clamp(1.5rem,1rem + 3vw,3.5rem);display:grid;justify-items:center;gap:.75rem}
+.capture p{max-width:34rem;margin:0}
+.site-footer{border-top:1px solid var(--c-line);padding-block:2rem;font-size:var(--fs-small);color:var(--c-ink-soft)}
+.site-footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+.site-footer nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+
+.player{position:fixed;inset:0;z-index:55;background:rgb(10 20 30 / .9);display:none;flex-direction:column;align-items:center;justify-content:center;padding:1rem}
+.player.open{display:flex}
+.player__bar{width:min(100%,960px);display:flex;justify-content:space-between;align-items:center;color:#fff;margin-bottom:.5rem;gap:1rem}
+.player__bar button{min-height:44px;padding:.3em 1.1em;border-radius:var(--r-pill);border:0;background:rgb(255 255 255 / .18);color:#fff;font:700 1rem var(--font-sans);cursor:pointer;white-space:nowrap}
+.player__frame{width:min(100%,960px);aspect-ratio:16/9;border-radius:var(--r-media);overflow:hidden;background:#000}
+.player__frame iframe{width:100%;height:100%;border:0;display:block}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);visibility:hidden;background:var(--c-ink);color:#fff;padding:.7rem 1.2rem;border-radius:var(--r-pill);font-size:.95rem;transition:transform .25s,visibility .25s;z-index:60}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+/* LINE จากคอม: QR + คัดลอกข้อความ (ระบบเดียวกับหน้าหนังสือเล่ม 2) */
+.lg{position:fixed;inset:0;z-index:70;background:rgb(20 14 10 / .6);display:grid;place-items:center;padding:1rem}
+.lg[hidden]{display:none}
+.lg__card{background:#fff;border-radius:24px;padding:1.4rem 1.3rem 1.2rem;width:min(100%,25rem);text-align:center;box-shadow:0 20px 50px -20px rgb(0 0 0 / .5)}
+.lg__t{font-weight:700;font-size:1.1rem;margin:0 0 .7rem;line-height:1.5}
+.lg__qr{width:220px;height:220px;margin:0 auto;background:#fff}
+.lg__qr svg{width:100%;height:100%;display:block}
+.lg__steps{text-align:left;max-width:20rem;margin:.8rem auto .4rem;padding-left:1.4rem;line-height:1.75;font-size:1rem}
+.lg__or{font-size:.9rem;opacity:.75;margin:.5rem 0 .6rem;line-height:1.6}
+.lg__copy{min-height:44px;padding:.4em 1.2em;border-radius:999px;border:2px solid #2E5A80;background:#fff;color:#2E5A80;font:700 .95rem inherit;font-family:inherit;cursor:pointer}
+.lg__copy.done{background:#2E5A80;color:#fff}
+.lg__close{display:block;margin:.8rem auto 0;min-height:40px;padding:.3em 1.2em;border:0;background:none;color:inherit;opacity:.7;font:600 .95rem inherit;font-family:inherit;cursor:pointer;text-decoration:underline}
+
+/* note above the price */
+.pnote{background:#FFF8E6;border:1px solid var(--c-sun);border-radius:var(--r-media);padding:.7rem .9rem;margin:0 0 1rem;font-size:.95rem;line-height:1.65}
+.pnote a{display:inline-block;font-weight:700;margin-top:.15rem}
+
+/* ===== ชุดสีเว็บ Piano Folder: Ink Navy + Ivory + ฟ้า + ทอง (พ.ย. 2026) =====
+   ฟ้า #2E5A80 = สีหลัก (ปุ่ม ลิงก์) · กรมท่า #1D2B46 = ตัวหนังสือ แถบเข้ม
+   Ivory #F6F4F0 = พื้นหน้า · ทอง = เน้นคำ เส้นใต้หัวข้อ (ไม่ใช้กับตัวหนังสือเล็ก) */
+:root{
+  --c-navy:#1D2B46; --c-ivory:#F6F4F0; --c-gold:#C99532;
+  --c-ink:#1D2B46; --c-ink-soft:#5A6478; --c-line:#E3E0D8; --c-shape:#D5DCE6;
+  --c-tint:#ECEAE4; --c-action:#2E5A80; --c-action-hover:#1D2B46;
+}
+body{background:var(--c-ivory)}
+.site-header{background:rgb(246 244 240 / .95)}
+h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--c-gold);margin:.7rem auto 0}
+.capture{background:var(--c-navy);color:var(--c-ivory)}
+.capture h2,.capture h3{color:#fff}
+.capture .hl{background:none;color:var(--c-sun)}
+.capture p,.capture .fine{color:rgb(246 244 240 / .82)}
+.capture a:not(.btn){color:var(--c-sun)}
+
+/* Basic: แถบบนสุด + ส่วน "ทำไมต้อง Basic Piano" พื้นกรมท่า */
+.topbar{background:var(--c-navy);color:var(--c-ivory);text-align:center;font-size:.85rem;font-weight:600;padding:.4rem 1rem}
+.topbar b{color:var(--c-sun)}
+.wcard{background:#fff;border:1px solid var(--c-line)}
+.wcard .wi{background:var(--c-ivory)}
+.vid{background:linear-gradient(160deg,#2E5A80,#1D2B46)}
+.song--soon .th{background:linear-gradient(160deg,#E4E9F0,#D5DCE6)}
+.owner .steps li::before{background:var(--c-navy)}
+.acct{background:var(--c-ivory)}
+#why{background:linear-gradient(180deg,#E9F0F7 0%,var(--c-ivory) 100%)}
+#why .wcard{background:#fff;border:1px solid #DCE6F0;box-shadow:0 6px 20px rgb(46 90 128 / .06)}
+#why .wcard .wi{background:#E9F0F7}
+#why .books-note{border-top-color:#DCE6F0}
+#why .books-note a{color:var(--c-action)}
+
+/* วลีไทย: ตัดบรรทัดได้เฉพาะระหว่างวลี */
+.ph{white-space:nowrap}
+/* แพ็กคู่ Basic Piano + เล่นเปียโน + ร้องเพลง (ปุ่มรอง ไม่แย่งปุ่มหลัก) */
+.duo{margin-top:var(--gap);background:#fff;border:1px dashed var(--c-gold);border-radius:var(--r-panel);padding:clamp(1.25rem,1rem + 2vw,2rem);display:grid;gap:1rem;align-items:center}
+@media (min-width:860px){.duo{grid-template-columns:1fr auto}}
+.duo h3{margin-bottom:.3rem}
+.duo p{margin:0 0 .5rem}
+.duo .fine{margin:0}
+.duo__p b{font-size:1.5rem;font-weight:800}
+.duo__p s{color:var(--c-ink-soft);margin-left:.3rem}
+@media (max-width:520px){.duo .btn{width:100%}}
+.choose{margin-top:.7rem!important;color:var(--c-ink);line-height:1.8}
+.songlist{font-size:var(--fs-small);color:var(--c-ink-soft);margin:0;line-height:1.9}
+</style>
+</head>
+<body>
+
+<div class="topbar"><span class="ph">เรียนได้ไม่มีวันหมดอายุ</span> · <b><span class="ph">ครูแฟ้มตรวจการบ้านให้</span></b></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span aria-hidden="true">←</span> Piano Folder</a>
+    <a class="btn" href="#order">สมัครเรียน</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="ph">คอร์สเปียโนออนไลน์</span> · <span class="ph">เล่นไป</span> <span class="ph">ร้องไป</span> 🎤</span>
+      <h1><span class="ph">เล่นเปียโน</span> <span class="ph">+&nbsp;ร้องเพลง</span></h1>
+      <p class="by">by <span class="ph">ครูแฟ้ม</span> · Piano Folder</p>
+      <p class="promise"><span class="ph">เล่นเปียโนคลอ</span> <span class="hl"><span class="ph">แล้วร้องเพลง</span><wbr><span class="ph">ที่คุณชอบได้เอง</span></span></p>
+      <p><span class="ph">ครูแฟ้มสอนเรื่องคอร์ดกับจังหวะ</span> <span class="ph">ผ่านเพลงดัง</span><wbr><span class="ph">ที่คัดมาแล้วว่าเหมาะกับการฝึก</span> <span class="ph">เรียนจบแล้ว</span><wbr><span class="ph">เอาวิธีเดียวกัน</span><wbr><span class="ph">ไปเล่นคลอเพลงอื่น</span><wbr><span class="ph">ที่คุณอยากร้อง</span><wbr><span class="ph">ได้เองครับ</span></p>
+      <p class="fine" style="margin-top:-.4rem"><span class="ph">ไม่ต้องมีพื้นฐาน</span> · <span class="ph">อ่านโน้ตไม่เป็น</span><wbr><span class="ph">ก็เรียนได้</span> · <span class="ph">10&nbsp;บท</span> <span class="ph">ยาวรวม&nbsp;8&nbsp;ชั่วโมง</span></p>
+      <div class="prices">
+        <div class="pchip"><b id="pFull"></b><span><span class="ph">คอร์สเต็ม</span> · <span class="ph">เรียนได้</span><wbr><span class="ph">ไม่มีวันหมดอายุ</span></span></div>
+        <div class="pchip pchip--sun"><b id="pOwner"></b><span><span class="ph">มีหนังสือ</span> <span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span><br><span class="ph">เล่มจริงหรือ</span> E-Book</span></div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#order">สมัครเรียน</a>
+        <a class="btn btn--quiet" href="#songs">ดูตัวอย่างเพลง</a>
+      </div>
+    </div>
+    <div>
+      <button class="vid" id="intro" type="button" aria-label="เล่นคลิปแนะนำคอร์ส เล่นเปียโน + ร้องเพลง">
+        <img id="introThumb" alt="" width="480" height="360">
+        <span class="play"><span><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#1B2F45"/></svg></span></span>
+      </button>
+      <p class="vid-cap"><span class="ph">คลิปแนะนำคอร์สจากครูแฟ้ม</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap narrow">
+    <h2 class="center"><span class="ph">หัวใจของการเล่น&nbsp;+&nbsp;ร้อง</span> <span class="hl"><span class="ph">คือคอร์ดกับจังหวะ</span></span></h2>
+    <p><span class="ph">หลายคนคิดว่า</span><wbr><span class="ph">จะเล่นเปียโนคลอเพลงได้</span> <span class="ph">ต้องจำโน้ตทีละตัว</span><wbr><span class="ph">ให้ครบทั้งเพลง</span> <span class="ph">ความจริงแล้ว</span><wbr><span class="ph">สิ่งที่ใช้จริงมีแค่&nbsp;2&nbsp;อย่าง</span> <span class="ph">คือ</span> <span class="ph">“การเล่นคอร์ด”</span> <span class="ph">กับ</span> <span class="ph">“การจับจังหวะ”</span></p>
+    <p><span class="ph">ถ้าเสียงร้องคือพระเอก</span> <span class="ph">เปียโนก็เป็นเพื่อนสนิท</span><wbr><span class="ph">ที่คอยซัพพอร์ตอยู่ข้าง&nbsp;ๆ</span> <span class="ph">เปียโนไม่ต้องเล่นทำนองเอง</span> <span class="ph">แค่เล่นคอร์ดให้ถูก</span> <span class="ph">ลงจังหวะให้ตรง</span> <span class="ph">เสียงร้องของคุณ</span><wbr><span class="ph">ก็เดินเพลงไปได้แล้วครับ</span></p>
+    <p><span class="ph">เข้าใจ&nbsp;2&nbsp;อย่างนี้แล้ว</span> <span class="ph">คุณจะเอาไปใช้</span><wbr><span class="ph">กับเพลงที่ชอบได้เอง</span> <span class="ph">ไม่ต้องรอให้ใครสอน</span><wbr><span class="ph">ทีละเพลง</span></p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <h2 class="center"><span class="ph">ทำไมต้อง</span> <span class="hl"><span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span></span></h2>
+    <div class="why">
+      <div class="wcard"><span class="wi" aria-hidden="true">🎤</span><b><span class="ph">เล่นไป</span> <span class="ph">ร้องไป</span> <span class="ph">ได้ด้วยตัวเอง</span></b><p><span class="ph">คุณร้องทำนอง</span> <span class="ph">เปียโนเล่นคอร์ดคลอ</span> <span class="ph">ร้องเล่นเองที่บ้าน</span> <span class="ph">หรือร้องให้คนที่คุณรักฟัง</span></p></div>
+      <div class="wcard"><span class="wi" aria-hidden="true">🧠</span><b><span class="ph">เข้าใจคอร์ด</span> <span class="ph">ไม่ต้องจำทีละเพลง</span></b><p><span class="ph">เรียนอ่านคอร์ดเพลง</span><wbr><span class="ph">และรูปแบบการเล่น</span> <span class="ph">แล้วเอาไปใช้</span><wbr><span class="ph">กับเพลงอื่นที่ชอบได้เอง</span></p></div>
+      <div class="wcard"><span class="wi" aria-hidden="true">🎵</span><b><span class="ph">ฝึกผ่านเพลงดัง</span><wbr><span class="ph">ที่คุณร้องตามได้</span></b><p><span class="ph">ทั้งเพลงไทยและสากล</span> <span class="ph">คัดมาแล้ว</span><wbr><span class="ph">ว่าเหมาะกับการฝึก</span></p></div>
+    </div>
+    <div class="books-note">
+      <b><span class="ph">ต่างจาก</span> Basic&nbsp;Piano <span class="ph">และหนังสือยังไง?</span></b>
+      <p><a href="/courses/basic/">Basic&nbsp;Piano</a> <span class="ph">และหนังสือของครูแฟ้ม</span> <span class="ph">สอนให้เปียโนเล่นทำนองเพลงเอง</span> <span class="ph">ส่วนคอร์สนี้</span> <span class="ph">คุณร้องทำนอง</span> <span class="ph">เปียโนเล่นคอร์ดคลอ</span> <span class="ph">อย่างเพลง</span> <span class="ph">ลม</span> <span class="ph">มีทั้งสองคอร์ส</span> <span class="ph">ใน</span> Basic&nbsp;Piano <span class="ph">เล่นแบบบรรเลง</span> <span class="ph">ส่วนคอร์สนี้</span><wbr><span class="ph">เล่นคอร์ดรองพื้น</span><wbr><span class="ph">แล้วร้องไปพร้อมกัน</span> <span class="ph">แบบที่เรียกว่า</span> Piano&nbsp;Accompaniment</p>
+      <p class="choose"><span class="ph">ถ้าอยากฝึกพื้นฐาน</span> <span class="ph">อ่านโน้ต</span> <span class="ph">หรือเล่นเปียโนบรรเลง</span> <span class="ph">เลือก</span> <a href="/courses/basic/">Basic&nbsp;Piano</a><br><span class="ph">แต่ถ้าอยากเล่นเปียโนไป</span> <span class="ph">ร้องเพลงไปด้วย</span> <span class="ph">เลือกคอร์ส</span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span> <span class="ph">ครับ</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="songs" class="tint">
+  <div class="wrap">
+    <h2 class="center"><span class="ph">ตัวอย่างเพลง</span><span class="hl"><span class="ph">ในคอร์ส</span></span></h2>
+    <p class="center sub"><span class="ph">แตะที่เพลง</span><wbr><span class="ph">เพื่อดูว่าเรียนจบแล้ว</span><wbr><span class="ph">จะเล่นไปร้องไปได้แบบไหนครับ</span></p>
+    <div class="songs" id="songList"></div>
+    <div class="extra">
+      <b><span class="ph">รายชื่อเพลงทั้งหมดในคอร์ส</span></b>
+      <p class="songlist">Happy&nbsp;Birthday&nbsp;· <span class="ph">ซ่อนกลิ่น&nbsp;·</span> <span class="ph">คนไม่มีแฟน&nbsp;·</span> <span class="ph">ถ้าเขาจะรัก&nbsp;·</span> <span class="ph">เลือกได้ไหม&nbsp;·</span> When&nbsp;You&nbsp;Say&nbsp;Nothing&nbsp;at&nbsp;All&nbsp;· <span class="ph">รักไม่ต้องการเวลา&nbsp;·</span> <span class="ph">หยุด&nbsp;·</span> <span class="ph">หมอกหรือควัน&nbsp;·</span> <span class="ph">ลม&nbsp;·</span> <span class="ph">จากนี้ไปจนนิรันดร์&nbsp;·</span> Perfect&nbsp;· <span class="ph">จังหวะตกหลุมรัก&nbsp;·</span> <span class="ph">เพียงชายคนนี้&nbsp;(ไม่ใช่ผู้วิเศษ)</span></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center"><span class="ph">ครูเรียงให้แล้ว</span> <span class="hl"><span class="ph">10&nbsp;บท</span></span></h2>
+    <p class="center sub"><span class="ph">ยาวรวม&nbsp;8&nbsp;ชั่วโมง</span> <span class="ph">เริ่มจากรูปแบบที่ง่ายที่สุด</span> <span class="ph">แล้วค่อยเพิ่มลูกเล่นทีละบท</span></p>
+    <div class="outline">
+      <details open>
+        <summary>บทที่&nbsp;1–3 · เริ่มเล่นไป ร้องไป <span><span class="ph">คอร์ดพื้นฐาน</span></span></summary>
+        <ol start="1">
+          <li>Introduction <span class="ph">แนะนำคอร์สเรียน</span></li>
+          <li><span class="ph">ทำความรู้จักกับ</span><wbr><span class="ph">การเล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span></li>
+          <li><span class="ph">เริ่มต้นเล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span> <span class="ph">ด้วย</span> Root&nbsp;&amp;&nbsp;Block&nbsp;Chord</li>
+        </ol>
+      </details>
+      <details>
+        <summary>บทที่&nbsp;4–8 · เพิ่มจังหวะ เพิ่มสีสัน <span><span class="ph">รูปแบบการเล่น</span></span></summary>
+        <ol start="4">
+          <li><span class="ph">การฟังจังหวะ</span> <span class="ph">และรูปแบบการเล่น</span> (Pattern)</li>
+          <li><span class="ph">สร้างความต่อเนื่อง</span><wbr><span class="ph">ด้วยคอร์ดพลิกกลับ</span> (Inversion)</li>
+          <li><span class="ph">เพิ่มการเคลื่อนไหวมือซ้าย</span><wbr><span class="ph">ด้วย</span> Broken&nbsp;Chord&nbsp;1-5-8</li>
+          <li><span class="ph">สร้างสีสันให้เพลง</span><wbr><span class="ph">ด้วย</span> Tension&nbsp;Chord</li>
+          <li><span class="ph">การฟังและการเล่นเพลง</span><wbr><span class="ph">จังหวะ&nbsp;6/8</span> <span class="ph">และ&nbsp;12/8</span></li>
+        </ol>
+      </details>
+      <details>
+        <summary>บทที่&nbsp;9–10 · รวมทักษะ <span><span class="ph">จบคอร์ส</span></span></summary>
+        <ol start="9">
+          <li><span class="ph">นำทักษะต่าง&nbsp;ๆ</span> <span class="ph">มารวมกัน</span></li>
+          <li><span class="ph">จบคอร์ส</span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span></li>
+        </ol>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <h2 class="center"><span class="ph">ในคอร์สนี้</span> <span class="hl"><span class="ph">คุณจะได้อะไรบ้าง</span></span></h2>
+    <div class="facts">
+      <div class="fact"><b>🎹 <span class="ph">เข้าใจคอร์ด</span> <span class="ph">หัวใจของการเล่น&nbsp;+&nbsp;ร้อง</span></b><p><span class="ph">เริ่มจากกดคอร์ดง่าย&nbsp;ๆ</span> <span class="ph">จับจังหวะ</span><wbr><span class="ph">แล้วร้องคลอไปด้วย</span> <span class="ph">ไปจนถึง</span><wbr><span class="ph">เติมสีสันให้เพลงน่าฟังขึ้น</span></p></div>
+      <div class="fact"><b>🥁 <span class="ph">ทักษะการฟัง</span></b><p><span class="ph">ฝึกฟังจังหวะ</span><wbr><span class="ph">แล้วเลือกรูปแบบการเล่น</span><wbr><span class="ph">ให้เข้ากับเพลง</span></p></div>
+      <div class="fact"><b>🎼 <span class="ph">วิธีการเล่นคอร์ด</span><wbr><span class="ph">ในรูปแบบต่าง&nbsp;ๆ</span></b><p><span class="ph">เพื่อสร้างความน่าสนใจ</span><wbr><span class="ph">ให้กับเพลง</span></p></div>
+      <div class="fact"><b>🔎 <span class="ph">หาคอร์ดเพลง</span><wbr><span class="ph">แบบที่มืออาชีพทำ</span></b><p><span class="ph">เรียนจบแล้ว</span> <span class="ph">หาคอร์ดเพลงที่อยากเล่นต่อ</span><wbr><span class="ph">ได้เอง</span></p></div>
+      <div class="fact"><b>📱 <span class="ph">ส่งการบ้าน</span> <span class="ph">ครูแฟ้มตรวจให้</span></b><p><span class="ph">ถ่ายคลิปตอนเล่นและร้อง</span><wbr><span class="ph">ส่งมาทาง</span> LINE <span class="ph">ไม่ต้องรอเล่นจบเพลง</span> <span class="ph">ส่งทีละท่อนได้เลย</span> <span class="ph">ติดตรงไหน</span> <span class="ph">ปรึกษาครูแฟ้มได้ฟรี</span></p></div>
+      <div class="fact"><b>🔒 <span class="ph">เรียนได้ตลอด</span> <span class="ph">ไม่มีวันหมดอายุ</span></b><p><span class="ph">เรียนในกลุ่ม</span> Facebook <span class="ph">ส่วนตัว</span> <span class="ph">ดูได้เฉพาะนักเรียน</span> <span class="ph">จะเรียนที่ไหน</span> <span class="ph">เมื่อไหร่ก็ได้</span></p></div>
+    </div>
+    <div class="need">
+      <p><strong><span class="ph">สิ่งที่ต้องมี:</span></strong> <span class="ph">เปียโนหรือคีย์บอร์ด</span> <span class="ph">ใช้ได้ทั้ง</span> <span class="ph">61&nbsp;และ&nbsp;88&nbsp;คีย์</span> <span class="ph">มือถือหรือแท็บเล็ต</span><wbr><span class="ph">ไว้ดูคลิป</span> <span class="ph">และสมุดกับปากกา</span></p>
+      <p><strong><span class="ph">เรียนจบแล้วเล่นได้แบบไหน:</span></strong> <span class="ph">ถ้าฝึกอย่างน้อย</span><wbr><span class="ph">วันละ&nbsp;15&nbsp;นาที</span><wbr><span class="ph">อย่างสม่ำเสมอ</span> <span class="ph">คุณจะเล่นไปร้องไปได้</span><wbr><span class="ph">แบบในคลิปตัวอย่าง</span> <span class="ph">และเอาวิธีเดียวกัน</span><wbr><span class="ph">ไปเล่นคลอเพลงอื่น</span><wbr><span class="ph">ที่หาคอร์ดได้</span><wbr><span class="ph">ด้วยตัวเองครับ</span></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center"><span class="ph">คอร์สนี้</span><span class="hl"><span class="ph">เหมาะกับใคร</span></span></h2>
+    <div class="fit">
+      <div class="box">
+        <h3><span class="ph">เหมาะกับคุณ</span> <span class="ph">ถ้า...</span></h3>
+        <ul>
+          <li><span class="ph">อยากเล่นเปียโน</span> <span class="ph">แล้วร้องเพลงที่ชอบไปด้วย</span></li>
+          <li><span class="ph">อยากเล่นและร้อง</span><wbr><span class="ph">ให้คนที่คุณรักฟัง</span></li>
+          <li><span class="ph">ไม่เคยมีพื้นฐาน</span> <span class="ph">หรืออ่านโน้ตไม่เป็น</span></li>
+          <li><span class="ph">อยากเข้าใจคอร์ด</span> <span class="ph">จะได้เล่นเพลงใหม่&nbsp;ๆ</span> <span class="ph">ได้เอง</span> <span class="ph">ไม่ต้องรอใครสอน</span><wbr><span class="ph">ทีละเพลง</span></li>
+        </ul>
+      </div>
+      <div class="box box--next">
+        <h3><span class="ph">อาจยังไม่ใช่คอร์สนี้</span> <span class="ph">ถ้า...</span></h3>
+        <ul>
+          <li><span class="ph">อยากฝึกพื้นฐาน</span> <span class="ph">อ่านโน้ต</span> <span class="ph">หรือเล่นเปียโนบรรเลง</span> <span class="ph">ดู</span> <a href="/courses/basic/"><strong>Basic&nbsp;Piano</strong></a> <span class="ph">หรือ</span> <a href="/piano-collection/"><strong>Piano&nbsp;Collection</strong></a> <span class="ph">ครับ</span></li>
+          <li><span class="ph">อยากเรียนเทคนิคการร้อง</span> <span class="ph">คอร์สนี้สอนการเล่นเปียโน</span><wbr><span class="ph">ไปพร้อมกับร้องเพลง</span> <span class="ph">ไม่ได้สอนเทคนิคการร้อง</span></li>
+          <li><span class="ph">อยากลองก่อน</span><wbr><span class="ph">ด้วยงบที่น้อยกว่า</span> <span class="ph">เริ่มจากหนังสือ</span> <a href="/books/book1/"><strong><span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span></strong></a> <span class="ph">แล้วค่อยมาต่อคอร์สนี้</span><wbr><span class="ph">ในราคาพิเศษ</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="tint">
+  <div class="wrap">
+    <h2 class="center"><span class="hl"><span class="ph">สมัครเรียน</span></span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span></h2>
+    <div class="order">
+      <div class="pay">
+        <h3><span class="ph">โอนตรงกับครูแฟ้ม</span></h3>
+        <p class="pnote"><span class="ph">มีหนังสือ</span> <span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span> <span class="ph">อยู่แล้ว?</span><br><a href="#owner"><span class="ph">ดูราคาพิเศษ</span><wbr><span class="ph">ก่อนโอน&nbsp;↓</span></a></p>
+        <div class="sum"><span><span class="ph">คอร์ส</span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span></span><b id="sumFull"></b></div>
+        <ol class="steps">
+          <li><span class="ph">คัดลอกเลขบัญชี</span> <span class="ph">แล้วโอนตามยอดด้านบน</span></li>
+          <li><span class="ph">กดปุ่มสีเขียว</span> LINE <span class="ph">จะเปิด</span><wbr><span class="ph">พร้อมข้อความสมัครเรียน</span> <span class="ph">กดส่งได้เลย</span></li>
+          <li><span class="ph">ส่งสลิปต่อในแชทเดียวกัน</span> <span class="ph">ทีมครูแฟ้ม</span><wbr><span class="ph">ส่งลิงก์เข้ากลุ่มเรียนให้ครับ</span></li>
+        </ol>
+        <div class="acct" id="acct"></div>
+        <a class="btn btn--line btn--block" id="orderBtn" href="#" target="_blank" rel="noopener">ส่งใบสมัครทาง LINE</a>
+        <p class="fine center" style="margin:.75rem 0 0"><span class="ph">โอนตรง</span> <span class="ph">ต้องเป็นบัญชีชื่อ</span> <strong id="gName" class="nowrap"></strong> <span class="ph">เท่านั้น</span></p>
+      </div>
+      <div class="owner" id="owner" style="scroll-margin-top:80px">
+        <h3><span class="ph">มีหนังสือ</span><br><span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span><br><span class="ph">อยู่แล้ว?</span></h3>
+        <p class="p"><span id="ownerP"></span><s id="ownerFull"></s></p>
+        <p class="gift">📖 <span class="ph">ใช้ได้ทั้งเล่มจริง</span><wbr><span class="ph">และ</span> E-Book</p>
+        <ol class="steps">
+          <li><span class="ph">ยังไม่ต้องโอนครับ</span> <span class="ph">กดปุ่มด้านล่าง</span> LINE <span class="ph">จะเปิด</span><wbr><span class="ph">พร้อมข้อความ</span> <span id="ownerKey"></span></li>
+          <li><span class="ph">ส่งรูปหนังสือ</span> <strong><span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span></strong> <span class="ph">ของคุณในแชท</span> <span class="ph">(หรือหน้าจอ&nbsp;E-Book)</span></li>
+          <li><span class="ph">ทีมครูแฟ้ม</span><wbr><span class="ph">ส่งรายละเอียดการโอน</span><wbr><span class="ph">กลับไปให้ครับ</span></li>
+        </ol>
+        <a class="btn btn--line btn--block" id="ownerBtn" href="#" target="_blank" rel="noopener" data-step3="ส่งรูปหนังสือของคุณต่อในแชทนั้น">รับราคาพิเศษทาง LINE</a>
+        <p class="fine" style="margin:.75rem 0 0"><span class="ph">ราคาพิเศษนี้ให้เพราะหนังสือ</span> <span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span> <span class="ph">มีช่วงเริ่มต้นของคอร์สนี้อยู่</span></p>
+      </div>
+    </div>
+    <div class="duo">
+      <div>
+        <h3><span class="ph">อยากเรียนทั้ง</span> Basic&nbsp;Piano <span class="ph">และ</span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง?</span></h3>
+        <p class="duo__p"><span class="ph">แพ็กคู่&nbsp;2&nbsp;คอร์ส</span> <b id="duoP"></b> <s id="duoFull"></s></p>
+        <p><span class="ph">เล่นเดี่ยวก็ได้</span> <span class="ph">เล่นไปร้องไปก็ได้</span> <span class="ph">ทั้งสองคอร์ส</span><wbr><span class="ph">เรียนได้ไม่มีวันหมดอายุ</span> <span class="ph">จะเริ่มคอร์สไหนก่อน</span><wbr><span class="ph">ก็ได้ครับ</span> <a href="/courses/basic/"><span class="ph">ดูรายละเอียด</span> Basic&nbsp;Piano&nbsp;→</a></p>
+        <p class="fine" style="margin-bottom:.4rem"><span class="ph">โอนเข้าบัญชีเดียวกับด้านบน</span> <span class="ph">แล้วกดปุ่มส่งข้อความ</span><wbr><span class="ph">พร้อมสลิป</span> · <span class="ph">ใช้ร่วมกับส่วนลดอื่นไม่ได้</span></p>
+        <p class="fine"><span class="ph">มีหนังสือ</span> <span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span> <span class="ph">อยู่แล้ว?</span> <a data-line href="#" target="_blank" rel="noopener"><span class="ph">ทักมาใน</span> LINE</a> <span class="ph">ก่อน</span> <span class="ph">ครูแฟ้มช่วยดู</span><wbr><span class="ph">ราคาที่คุ้มที่สุดให้</span></p>
+      </div>
+      <a class="btn btn--quiet" id="duoBtn" href="#" target="_blank" rel="noopener">สมัครแพ็กคู่ทาง LINE</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center"><span class="ph">คำถาม</span><span class="hl"><span class="ph">ที่พบบ่อย</span></span></h2>
+    <div class="faq">
+      <details><summary><span><span class="ph">ไม่มีพื้นฐานเลย</span> <span class="ph">เรียนได้ไหม</span></span></summary><p><span class="ph">ได้ครับ</span> <span class="ph">ผมรู้ดีว่าช่วงแรก</span><wbr><span class="ph">ส่วนที่ยากที่สุด</span><wbr><span class="ph">คือเล่นกับร้องพร้อมกัน</span> <span class="ph">คอร์สจึงเริ่มจาก</span><wbr><span class="ph">รูปแบบที่ง่ายที่สุด</span><wbr><span class="ph">แล้วค่อยเพิ่มทีละบท</span> <span class="ph">ถ้าซ้อมสม่ำเสมอ</span> <span class="ph">เล่นได้แน่นอน</span></p></details>
+      <details><summary><span><span class="ph">อ่านโน้ตไม่เป็น</span> <span class="ph">เรียนได้ไหม</span></span></summary><p><span class="ph">ได้ครับ</span> <span class="ph">โน้ตหลักของคอร์สนี้</span><wbr><span class="ph">เป็นเนื้อเพลงกับคอร์ด</span> <span class="ph">ไม่ต้องอ่านโน้ตบรรทัด&nbsp;5&nbsp;เส้น</span> <span class="ph">เล่นเป็นเพลงได้</span><wbr><span class="ph">กับอ่านโน้ตได้</span><wbr><span class="ph">เป็นคนละเรื่องกัน</span></p></details>
+      <details><summary><span><span class="ph">คอร์สนี้สอนร้องเพลงด้วยไหม</span></span></summary><p><span class="ph">ไม่ได้สอนเทคนิคการร้องครับ</span> <span class="ph">คอร์สนี้สอนการเล่นเปียโน</span><wbr><span class="ph">ไปพร้อมกับร้องเพลงเป็นหลัก</span> <span class="ph">ถ้าคุณร้องเพลงที่ชอบ</span><wbr><span class="ph">ตามได้อยู่แล้ว</span> <span class="ph">เริ่มได้เลย</span></p></details>
+      <details><summary><span><span class="ph">เรียนจบแล้ว</span> <span class="ph">เล่นเพลงอื่นได้เองจริงไหม</span></span></summary><p><span class="ph">ได้ครับ</span> <span class="ph">ถ้าฝึกอย่างน้อย</span><wbr><span class="ph">วันละ&nbsp;15&nbsp;นาที</span><wbr><span class="ph">อย่างสม่ำเสมอ</span> <span class="ph">ในคอร์สสอนวิธีหาคอร์ดเพลง</span><wbr><span class="ph">ในอินเทอร์เน็ต</span> <span class="ph">อ่านคอร์ด</span> <span class="ph">และเลือกรูปแบบการเล่น</span><wbr><span class="ph">ให้เข้ากับจังหวะ</span> <span class="ph">เพลงที่คอร์ดยากกว่าในคอร์ส</span><wbr><span class="ph">อาจต้องฝึกเพิ่ม</span> <span class="ph">ติดตรงไหน</span> <span class="ph">ถามครูแฟ้มได้เลย</span></p></details>
+      <details><summary><span><span class="ph">เรียน</span> Basic&nbsp;Piano <span class="ph">อยู่แล้ว</span> <span class="ph">ต่างกันยังไง</span></span></summary><p>Basic&nbsp;Piano <span class="ph">เปียโนเล่นทำนองเอง</span> <span class="ph">คอร์สนี้คุณร้องทำนอง</span> <span class="ph">เปียโนคลอด้วยคอร์ด</span> <span class="ph">อย่างเพลง</span> <span class="ph">ลม</span> <span class="ph">มีทั้งสองคอร์ส</span> <span class="ph">ใน</span> Basic&nbsp;Piano <span class="ph">เล่นแบบบรรเลง</span> <span class="ph">ส่วนคอร์สนี้</span><wbr><span class="ph">เล่นคอร์ดรองพื้น</span><wbr><span class="ph">แล้วร้องไปด้วย</span> <span class="ph">เรียนคู่กันได้</span> <span class="ph">ไม่ซ้ำกันครับ</span> <span class="ph">นักเรียน</span> Basic&nbsp;Piano <span class="ph">มีราคาพิเศษ</span> <a id="basicKeyLink" href="#" target="_blank" rel="noopener"><span class="ph">ทักมาใน</span> LINE</a> <span class="ph">แล้วพิมพ์</span> <strong id="basicKey"></strong> <span class="ph">ได้เลย</span></p></details>
+      <details><summary><span><span class="ph">มีหนังสือ</span> <span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span> <span class="ph">อยู่แล้ว</span> <span class="ph">จะเรียนซ้ำไหม</span></span></summary><p><span class="ph">ช่วงเริ่มต้นของคอร์สนี้</span><wbr><span class="ph">มีอยู่ในหนังสือเล่มนี้</span> <span class="ph">คนที่มีหนังสืออยู่แล้ว</span> <span class="ph">ทั้งเล่มจริงและ</span> E-Book <span class="ph">จึงได้ราคาพิเศษ</span> <span data-owner-price></span> <span class="ph">ส่วนที่เหลือ</span><wbr><span class="ph">เป็นเรื่องคอร์ด</span><wbr><span class="ph">และการเล่นไปร้องไป</span><wbr><span class="ph">ที่ไม่มีในหนังสือครับ</span></p></details>
+      <details><summary><span><span class="ph">ยังไม่มีเปียโน</span> <span class="ph">เริ่มเรียนก่อนได้ไหม</span></span></summary><p><span class="ph">แนะนำให้มีเปียโนก่อนครับ</span> <span class="ph">เหมือนเรียนขับรถ</span><wbr><span class="ph">แต่ไม่มีรถให้หัด</span> <span class="ph">ครูสอนเก่งแค่ไหน</span><wbr><span class="ph">ก็ยากที่จะขับเป็น</span> <span class="ph">ใช้ได้ทั้ง</span> <span class="ph">61&nbsp;และ&nbsp;88&nbsp;คีย์</span> <span class="ph">เครื่องเก่าก็ได้</span> <span class="ph">ขอแค่กดแล้ว</span><wbr><span class="ph">เสียงไม่เพี้ยน</span></p></details>
+      <details><summary><span><span class="ph">ต้องซ้อมวันละเท่าไหร่</span></span></summary><p><span class="ph">อย่างน้อยวันละ&nbsp;15&nbsp;นาทีครับ</span> <span class="ph">ซ้อมสั้นแต่สม่ำเสมอ</span> <span class="ph">ได้ผลกว่าซ้อมนาน</span><wbr><span class="ph">แต่นาน&nbsp;ๆ&nbsp;ที</span></p></details>
+      <details><summary><span><span class="ph">เรียนได้นานแค่ไหน</span></span></summary><p><span class="ph">คอร์สไม่มีวันหมดอายุ</span> <span class="ph">กลับมาดูซ้ำได้ตลอดครับ</span></p></details>
+      <details><summary><span><span class="ph">ติดตรงไหน</span> <span class="ph">ถามได้ไหม</span></span></summary><p><span class="ph">ได้ครับ</span> <span class="ph">ถ่ายคลิปตอนเล่นและร้อง</span><wbr><span class="ph">ส่งมาให้ครูแฟ้มตรวจทาง</span> LINE <span class="ph">ส่งทีละท่อนได้เลย</span> <span class="ph">ยิ่งส่งบ่อย</span> <span class="ph">ยิ่งมีโอกาสเล่นได้เร็วขึ้น</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="capture">
+      <h2><span class="ph">มีคำถาม?</span> <span class="hl"><span class="ph">ทักครูใน</span> LINE</span></h2>
+      <p><span class="ph">ไม่แน่ใจว่าควรเริ่มจาก</span> Basic&nbsp;Piano <span class="ph">หรือ</span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง</span> <span class="ph">ทักมาถามได้เลยครับ</span></p>
+      <a class="btn btn--line" data-line href="#" target="_blank" rel="noopener" style="min-height:56px">ทักครูแฟ้มใน LINE @PianoFolder</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong style="color:var(--c-ink)">Piano Folder</strong> · © <span id="yr">2026</span></div>
+    <nav><a href="/"><span class="ph">หน้าแรก</span></a><a href="/books/"><span class="ph">หนังสือ</span></a><a href="/courses/basic/">Basic Piano</a><a href="/piano-collection/">Piano Collection</a><a data-line href="#">LINE</a></nav>
+  </div>
+</footer>
+
+<div class="player" id="player" role="dialog" aria-modal="true" aria-label="คลิปตัวอย่าง">
+  <div class="player__bar"><b id="playerTitle"></b><button type="button" id="playerClose" aria-label="ปิด">✕ ปิด</button></div>
+  <div class="player__frame" id="playerFrame"></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="lg" id="lgBox" role="dialog" aria-modal="true" aria-labelledby="lgT" hidden>
+  <div class="lg__card">
+    <p class="lg__t" id="lgT">สั่งจากคอม? ทำต่อในมือถืออีก 1 ขั้น</p>
+    <div class="lg__qr" id="lgQr" role="img" aria-label="QR สำหรับส่งข้อความเข้า LINE"></div>
+    <ol class="lg__steps">
+      <li>เปิดกล้องมือถือ <b>สแกน QR นี้</b></li>
+      <li>LINE จะเปิดพร้อมข้อความ <b>กดส่ง</b></li>
+      <li id="lgS3">แนบสลิปการโอนต่อในแชทนั้นได้เลย</li>
+    </ol>
+    <p class="lg__or">หรือใช้ LINE ในคอม: คัดลอกข้อความ แล้วไปวางในแชท <a href="https://line.me/R/ti/p/%40PianoFolder" target="_blank" rel="noopener">@PianoFolder</a></p>
+    <button class="lg__copy" id="lgCopy" type="button">คัดลอกข้อความ</button>
+    <button class="lg__close" id="lgClose" type="button">ปิด</button>
+  </div>
+</div>
+
+<script>/* QR Code Generator for JavaScript (c) 2009 Kazuhiko Arase, MIT license */
+var qrcode=function(){var t=function(t,r){var e=t,n=g[r],o=null,i=0,a=null,u=[],f={},c=function(t,r){o=function(t){for(var r=new Array(t),e=0;e<t;e+=1){r[e]=new Array(t);for(var n=0;n<t;n+=1)r[e][n]=null}return r}(i=4*e+17),l(0,0),l(i-7,0),l(0,i-7),s(),h(),d(t,r),e>=7&&v(t),null==a&&(a=p(e,n,u)),w(a,r)},l=function(t,r){for(var e=-1;e<=7;e+=1)if(!(t+e<=-1||i<=t+e))for(var n=-1;n<=7;n+=1)r+n<=-1||i<=r+n||(o[t+e][r+n]=0<=e&&e<=6&&(0==n||6==n)||0<=n&&n<=6&&(0==e||6==e)||2<=e&&e<=4&&2<=n&&n<=4)},h=function(){for(var t=8;t<i-8;t+=1)null==o[t][6]&&(o[t][6]=t%2==0);for(var r=8;r<i-8;r+=1)null==o[6][r]&&(o[6][r]=r%2==0)},s=function(){for(var t=B.getPatternPosition(e),r=0;r<t.length;r+=1)for(var n=0;n<t.length;n+=1){var i=t[r],a=t[n];if(null==o[i][a])for(var u=-2;u<=2;u+=1)for(var f=-2;f<=2;f+=1)o[i+u][a+f]=-2==u||2==u||-2==f||2==f||0==u&&0==f}},v=function(t){for(var r=B.getBCHTypeNumber(e),n=0;n<18;n+=1){var a=!t&&1==(r>>n&1);o[Math.floor(n/3)][n%3+i-8-3]=a}for(n=0;n<18;n+=1){a=!t&&1==(r>>n&1);o[n%3+i-8-3][Math.floor(n/3)]=a}},d=function(t,r){for(var e=n<<3|r,a=B.getBCHTypeInfo(e),u=0;u<15;u+=1){var f=!t&&1==(a>>u&1);u<6?o[u][8]=f:u<8?o[u+1][8]=f:o[i-15+u][8]=f}for(u=0;u<15;u+=1){f=!t&&1==(a>>u&1);u<8?o[8][i-u-1]=f:u<9?o[8][15-u-1+1]=f:o[8][15-u-1]=f}o[i-8][8]=!t},w=function(t,r){for(var e=-1,n=i-1,a=7,u=0,f=B.getMaskFunction(r),c=i-1;c>0;c-=2)for(6==c&&(c-=1);;){for(var g=0;g<2;g+=1)if(null==o[n][c-g]){var l=!1;u<t.length&&(l=1==(t[u]>>>a&1)),f(n,c-g)&&(l=!l),o[n][c-g]=l,-1==(a-=1)&&(u+=1,a=7)}if((n+=e)<0||i<=n){n-=e,e=-e;break}}},p=function(t,r,e){for(var n=A.getRSBlocks(t,r),o=b(),i=0;i<e.length;i+=1){var a=e[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var u=0;for(i=0;i<n.length;i+=1)u+=n[i].dataCount;if(o.getLengthInBits()>8*u)throw"code length overflow. ("+o.getLengthInBits()+">"+8*u+")";for(o.getLengthInBits()+4<=8*u&&o.put(0,4);o.getLengthInBits()%8!=0;)o.putBit(!1);for(;!(o.getLengthInBits()>=8*u||(o.put(236,8),o.getLengthInBits()>=8*u));)o.put(17,8);return function(t,r){for(var e=0,n=0,o=0,i=new Array(r.length),a=new Array(r.length),u=0;u<r.length;u+=1){var f=r[u].dataCount,c=r[u].totalCount-f;n=Math.max(n,f),o=Math.max(o,c),i[u]=new Array(f);for(var g=0;g<i[u].length;g+=1)i[u][g]=255&t.getBuffer()[g+e];e+=f;var l=B.getErrorCorrectPolynomial(c),h=k(i[u],l.getLength()-1).mod(l);for(a[u]=new Array(l.getLength()-1),g=0;g<a[u].length;g+=1){var s=g+h.getLength()-a[u].length;a[u][g]=s>=0?h.getAt(s):0}}var v=0;for(g=0;g<r.length;g+=1)v+=r[g].totalCount;var d=new Array(v),w=0;for(g=0;g<n;g+=1)for(u=0;u<r.length;u+=1)g<i[u].length&&(d[w]=i[u][g],w+=1);for(g=0;g<o;g+=1)for(u=0;u<r.length;u+=1)g<a[u].length&&(d[w]=a[u][g],w+=1);return d}(o,n)};f.addData=function(t,r){var e=null;switch(r=r||"Byte"){case"Numeric":e=M(t);break;case"Alphanumeric":e=x(t);break;case"Byte":e=m(t);break;case"Kanji":e=L(t);break;default:throw"mode:"+r}u.push(e),a=null},f.isDark=function(t,r){if(t<0||i<=t||r<0||i<=r)throw t+","+r;return o[t][r]},f.getModuleCount=function(){return i},f.make=function(){if(e<1){for(var t=1;t<40;t++){for(var r=A.getRSBlocks(t,n),o=b(),i=0;i<u.length;i++){var a=u[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var g=0;for(i=0;i<r.length;i++)g+=r[i].dataCount;if(o.getLengthInBits()<=8*g)break}e=t}c(!1,function(){for(var t=0,r=0,e=0;e<8;e+=1){c(!0,e);var n=B.getLostPoint(f);(0==e||t>n)&&(t=n,r=e)}return r}())},f.createTableTag=function(t,r){t=t||2;var e="";e+='<table style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: "+(r=void 0===r?4*t:r)+"px;",e+='">',e+="<tbody>";for(var n=0;n<f.getModuleCount();n+=1){e+="<tr>";for(var o=0;o<f.getModuleCount();o+=1)e+='<td style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: 0px;",e+=" width: "+t+"px;",e+=" height: "+t+"px;",e+=" background-color: ",e+=f.isDark(n,o)?"#000000":"#ffffff",e+=";",e+='"/>';e+="</tr>"}return e+="</tbody>",e+="</table>"},f.createSvgTag=function(t,r,e,n){var o={};"object"==typeof arguments[0]&&(t=(o=arguments[0]).cellSize,r=o.margin,e=o.alt,n=o.title),t=t||2,r=void 0===r?4*t:r,(e="string"==typeof e?{text:e}:e||{}).text=e.text||null,e.id=e.text?e.id||"qrcode-description":null,(n="string"==typeof n?{text:n}:n||{}).text=n.text||null,n.id=n.text?n.id||"qrcode-title":null;var i,a,u,c,g=f.getModuleCount()*t+2*r,l="";for(c="l"+t+",0 0,"+t+" -"+t+",0 0,-"+t+"z ",l+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',l+=o.scalable?"":' width="'+g+'px" height="'+g+'px"',l+=' viewBox="0 0 '+g+" "+g+'" ',l+=' preserveAspectRatio="xMinYMin meet"',l+=n.text||e.text?' role="img" aria-labelledby="'+y([n.id,e.id].join(" ").trim())+'"':"",l+=">",l+=n.text?'<title id="'+y(n.id)+'">'+y(n.text)+"</title>":"",l+=e.text?'<description id="'+y(e.id)+'">'+y(e.text)+"</description>":"",l+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',l+='<path d="',a=0;a<f.getModuleCount();a+=1)for(u=a*t+r,i=0;i<f.getModuleCount();i+=1)f.isDark(a,i)&&(l+="M"+(i*t+r)+","+u+c);return l+='" stroke="transparent" fill="black"/>',l+="</svg>"},f.createDataURL=function(t,r){t=t||2,r=void 0===r?4*t:r;var e=f.getModuleCount()*t+2*r,n=r,o=e-r;return I(e,e,(function(r,e){if(n<=r&&r<o&&n<=e&&e<o){var i=Math.floor((r-n)/t),a=Math.floor((e-n)/t);return f.isDark(a,i)?0:1}return 1}))},f.createImgTag=function(t,r,e){t=t||2,r=void 0===r?4*t:r;var n=f.getModuleCount()*t+2*r,o="";return o+="<img",o+=' src="',o+=f.createDataURL(t,r),o+='"',o+=' width="',o+=n,o+='"',o+=' height="',o+=n,o+='"',e&&(o+=' alt="',o+=y(e),o+='"'),o+="/>"};var y=function(t){for(var r="",e=0;e<t.length;e+=1){var n=t.charAt(e);switch(n){case"<":r+="&lt;";break;case">":r+="&gt;";break;case"&":r+="&amp;";break;case'"':r+="&quot;";break;default:r+=n}}return r};return f.createASCII=function(t,r){if((t=t||1)<2)return function(t){t=void 0===t?2:t;var r,e,n,o,i,a=1*f.getModuleCount()+2*t,u=t,c=a-t,g={"██":"█","█ ":"▀"," █":"▄","  ":" "},l={"██":"▀","█ ":"▀"," █":" ","  ":" "},h="";for(r=0;r<a;r+=2){for(n=Math.floor((r-u)/1),o=Math.floor((r+1-u)/1),e=0;e<a;e+=1)i="█",u<=e&&e<c&&u<=r&&r<c&&f.isDark(n,Math.floor((e-u)/1))&&(i=" "),u<=e&&e<c&&u<=r+1&&r+1<c&&f.isDark(o,Math.floor((e-u)/1))?i+=" ":i+="█",h+=t<1&&r+1>=c?l[i]:g[i];h+="\n"}return a%2&&t>0?h.substring(0,h.length-a-1)+Array(a+1).join("▀"):h.substring(0,h.length-1)}(r);t-=1,r=void 0===r?2*t:r;var e,n,o,i,a=f.getModuleCount()*t+2*r,u=r,c=a-r,g=Array(t+1).join("██"),l=Array(t+1).join("  "),h="",s="";for(e=0;e<a;e+=1){for(o=Math.floor((e-u)/t),s="",n=0;n<a;n+=1)i=1,u<=n&&n<c&&u<=e&&e<c&&f.isDark(o,Math.floor((n-u)/t))&&(i=0),s+=i?g:l;for(o=0;o<t;o+=1)h+=s+"\n"}return h.substring(0,h.length-1)},f.renderTo2dContext=function(t,r){r=r||2;for(var e=f.getModuleCount(),n=0;n<e;n++)for(var o=0;o<e;o++)t.fillStyle=f.isDark(n,o)?"black":"white",t.fillRect(n*r,o*r,r,r)},f};t.stringToBytes=(t.stringToBytesFuncs={default:function(t){for(var r=[],e=0;e<t.length;e+=1){var n=t.charCodeAt(e);r.push(255&n)}return r}}).default,t.createStringToBytes=function(t,r){var e=function(){for(var e=S(t),n=function(){var t=e.read();if(-1==t)throw"eof";return t},o=0,i={};;){var a=e.read();if(-1==a)break;var u=n(),f=n()<<8|n();i[String.fromCharCode(a<<8|u)]=f,o+=1}if(o!=r)throw o+" != "+r;return i}(),n="?".charCodeAt(0);return function(t){for(var r=[],o=0;o<t.length;o+=1){var i=t.charCodeAt(o);if(i<128)r.push(i);else{var a=e[t.charAt(o)];"number"==typeof a?(255&a)==a?r.push(a):(r.push(a>>>8),r.push(255&a)):r.push(n)}}return r}};var r,e,n,o,i,a=1,u=2,f=4,c=8,g={L:1,M:0,Q:3,H:2},l=0,h=1,s=2,v=3,d=4,w=5,p=6,y=7,B=(r=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],e=1335,n=7973,i=function(t){for(var r=0;0!=t;)r+=1,t>>>=1;return r},(o={}).getBCHTypeInfo=function(t){for(var r=t<<10;i(r)-i(e)>=0;)r^=e<<i(r)-i(e);return 21522^(t<<10|r)},o.getBCHTypeNumber=function(t){for(var r=t<<12;i(r)-i(n)>=0;)r^=n<<i(r)-i(n);return t<<12|r},o.getPatternPosition=function(t){return r[t-1]},o.getMaskFunction=function(t){switch(t){case l:return function(t,r){return(t+r)%2==0};case h:return function(t,r){return t%2==0};case s:return function(t,r){return r%3==0};case v:return function(t,r){return(t+r)%3==0};case d:return function(t,r){return(Math.floor(t/2)+Math.floor(r/3))%2==0};case w:return function(t,r){return t*r%2+t*r%3==0};case p:return function(t,r){return(t*r%2+t*r%3)%2==0};case y:return function(t,r){return(t*r%3+(t+r)%2)%2==0};default:throw"bad maskPattern:"+t}},o.getErrorCorrectPolynomial=function(t){for(var r=k([1],0),e=0;e<t;e+=1)r=r.multiply(k([1,C.gexp(e)],0));return r},o.getLengthInBits=function(t,r){if(1<=r&&r<10)switch(t){case a:return 10;case u:return 9;case f:case c:return 8;default:throw"mode:"+t}else if(r<27)switch(t){case a:return 12;case u:return 11;case f:return 16;case c:return 10;default:throw"mode:"+t}else{if(!(r<41))throw"type:"+r;switch(t){case a:return 14;case u:return 13;case f:return 16;case c:return 12;default:throw"mode:"+t}}},o.getLostPoint=function(t){for(var r=t.getModuleCount(),e=0,n=0;n<r;n+=1)for(var o=0;o<r;o+=1){for(var i=0,a=t.isDark(n,o),u=-1;u<=1;u+=1)if(!(n+u<0||r<=n+u))for(var f=-1;f<=1;f+=1)o+f<0||r<=o+f||0==u&&0==f||a==t.isDark(n+u,o+f)&&(i+=1);i>5&&(e+=3+i-5)}for(n=0;n<r-1;n+=1)for(o=0;o<r-1;o+=1){var c=0;t.isDark(n,o)&&(c+=1),t.isDark(n+1,o)&&(c+=1),t.isDark(n,o+1)&&(c+=1),t.isDark(n+1,o+1)&&(c+=1),0!=c&&4!=c||(e+=3)}for(n=0;n<r;n+=1)for(o=0;o<r-6;o+=1)t.isDark(n,o)&&!t.isDark(n,o+1)&&t.isDark(n,o+2)&&t.isDark(n,o+3)&&t.isDark(n,o+4)&&!t.isDark(n,o+5)&&t.isDark(n,o+6)&&(e+=40);for(o=0;o<r;o+=1)for(n=0;n<r-6;n+=1)t.isDark(n,o)&&!t.isDark(n+1,o)&&t.isDark(n+2,o)&&t.isDark(n+3,o)&&t.isDark(n+4,o)&&!t.isDark(n+5,o)&&t.isDark(n+6,o)&&(e+=40);var g=0;for(o=0;o<r;o+=1)for(n=0;n<r;n+=1)t.isDark(n,o)&&(g+=1);return e+=Math.abs(100*g/r/r-50)/5*10},o),C=function(){for(var t=new Array(256),r=new Array(256),e=0;e<8;e+=1)t[e]=1<<e;for(e=8;e<256;e+=1)t[e]=t[e-4]^t[e-5]^t[e-6]^t[e-8];for(e=0;e<255;e+=1)r[t[e]]=e;var n={glog:function(t){if(t<1)throw"glog("+t+")";return r[t]},gexp:function(r){for(;r<0;)r+=255;for(;r>=256;)r-=255;return t[r]}};return n}();function k(t,r){if(void 0===t.length)throw t.length+"/"+r;var e=function(){for(var e=0;e<t.length&&0==t[e];)e+=1;for(var n=new Array(t.length-e+r),o=0;o<t.length-e;o+=1)n[o]=t[o+e];return n}(),n={getAt:function(t){return e[t]},getLength:function(){return e.length},multiply:function(t){for(var r=new Array(n.getLength()+t.getLength()-1),e=0;e<n.getLength();e+=1)for(var o=0;o<t.getLength();o+=1)r[e+o]^=C.gexp(C.glog(n.getAt(e))+C.glog(t.getAt(o)));return k(r,0)},mod:function(t){if(n.getLength()-t.getLength()<0)return n;for(var r=C.glog(n.getAt(0))-C.glog(t.getAt(0)),e=new Array(n.getLength()),o=0;o<n.getLength();o+=1)e[o]=n.getAt(o);for(o=0;o<t.getLength();o+=1)e[o]^=C.gexp(C.glog(t.getAt(o))+r);return k(e,0).mod(t)}};return n}var A=function(){var t=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],r=function(t,r){var e={};return e.totalCount=t,e.dataCount=r,e},e={};return e.getRSBlocks=function(e,n){var o=function(r,e){switch(e){case g.L:return t[4*(r-1)+0];case g.M:return t[4*(r-1)+1];case g.Q:return t[4*(r-1)+2];case g.H:return t[4*(r-1)+3];default:return}}(e,n);if(void 0===o)throw"bad rs block @ typeNumber:"+e+"/errorCorrectionLevel:"+n;for(var i=o.length/3,a=[],u=0;u<i;u+=1)for(var f=o[3*u+0],c=o[3*u+1],l=o[3*u+2],h=0;h<f;h+=1)a.push(r(c,l));return a},e}(),b=function(){var t=[],r=0,e={getBuffer:function(){return t},getAt:function(r){var e=Math.floor(r/8);return 1==(t[e]>>>7-r%8&1)},put:function(t,r){for(var n=0;n<r;n+=1)e.putBit(1==(t>>>r-n-1&1))},getLengthInBits:function(){return r},putBit:function(e){var n=Math.floor(r/8);t.length<=n&&t.push(0),e&&(t[n]|=128>>>r%8),r+=1}};return e},M=function(t){var r=a,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+2<r.length;)t.put(o(r.substring(n,n+3)),10),n+=3;n<r.length&&(r.length-n==1?t.put(o(r.substring(n,n+1)),4):r.length-n==2&&t.put(o(r.substring(n,n+2)),7))}},o=function(t){for(var r=0,e=0;e<t.length;e+=1)r=10*r+i(t.charAt(e));return r},i=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);throw"illegal char :"+t};return n},x=function(t){var r=u,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+1<r.length;)t.put(45*o(r.charAt(n))+o(r.charAt(n+1)),11),n+=2;n<r.length&&t.put(o(r.charAt(n)),6)}},o=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);if("A"<=t&&t<="Z")return t.charCodeAt(0)-"A".charCodeAt(0)+10;switch(t){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+t}};return n},m=function(r){var e=f,n=t.stringToBytes(r),o={getMode:function(){return e},getLength:function(t){return n.length},write:function(t){for(var r=0;r<n.length;r+=1)t.put(n[r],8)}};return o},L=function(r){var e=c,n=t.stringToBytesFuncs.SJIS;if(!n)throw"sjis not supported.";!function(t,r){var e=n("友");if(2!=e.length||38726!=(e[0]<<8|e[1]))throw"sjis not supported."}();var o=n(r),i={getMode:function(){return e},getLength:function(t){return~~(o.length/2)},write:function(t){for(var r=o,e=0;e+1<r.length;){var n=(255&r[e])<<8|255&r[e+1];if(33088<=n&&n<=40956)n-=33088;else{if(!(57408<=n&&n<=60351))throw"illegal char at "+(e+1)+"/"+n;n-=49472}n=192*(n>>>8&255)+(255&n),t.put(n,13),e+=2}if(e<r.length)throw"illegal char at "+(e+1)}};return i},D=function(){var t=[],r={writeByte:function(r){t.push(255&r)},writeShort:function(t){r.writeByte(t),r.writeByte(t>>>8)},writeBytes:function(t,e,n){e=e||0,n=n||t.length;for(var o=0;o<n;o+=1)r.writeByte(t[o+e])},writeString:function(t){for(var e=0;e<t.length;e+=1)r.writeByte(t.charCodeAt(e))},toByteArray:function(){return t},toString:function(){var r="";r+="[";for(var e=0;e<t.length;e+=1)e>0&&(r+=","),r+=t[e];return r+="]"}};return r},S=function(t){var r=t,e=0,n=0,o=0,i={read:function(){for(;o<8;){if(e>=r.length){if(0==o)return-1;throw"unexpected end of file./"+o}var t=r.charAt(e);if(e+=1,"="==t)return o=0,-1;t.match(/^\s$/)||(n=n<<6|a(t.charCodeAt(0)),o+=6)}var i=n>>>o-8&255;return o-=8,i}},a=function(t){if(65<=t&&t<=90)return t-65;if(97<=t&&t<=122)return t-97+26;if(48<=t&&t<=57)return t-48+52;if(43==t)return 62;if(47==t)return 63;throw"c:"+t};return i},I=function(t,r,e){for(var n=function(t,r){var e=t,n=r,o=new Array(t*r),i={setPixel:function(t,r,n){o[r*e+t]=n},write:function(t){t.writeString("GIF87a"),t.writeShort(e),t.writeShort(n),t.writeByte(128),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(255),t.writeByte(255),t.writeByte(255),t.writeString(","),t.writeShort(0),t.writeShort(0),t.writeShort(e),t.writeShort(n),t.writeByte(0);var r=a(2);t.writeByte(2);for(var o=0;r.length-o>255;)t.writeByte(255),t.writeBytes(r,o,255),o+=255;t.writeByte(r.length-o),t.writeBytes(r,o,r.length-o),t.writeByte(0),t.writeString(";")}},a=function(t){for(var r=1<<t,e=1+(1<<t),n=t+1,i=u(),a=0;a<r;a+=1)i.add(String.fromCharCode(a));i.add(String.fromCharCode(r)),i.add(String.fromCharCode(e));var f,c,g,l=D(),h=(f=l,c=0,g=0,{write:function(t,r){if(t>>>r!=0)throw"length over";for(;c+r>=8;)f.writeByte(255&(t<<c|g)),r-=8-c,t>>>=8-c,g=0,c=0;g|=t<<c,c+=r},flush:function(){c>0&&f.writeByte(g)}});h.write(r,n);var s=0,v=String.fromCharCode(o[s]);for(s+=1;s<o.length;){var d=String.fromCharCode(o[s]);s+=1,i.contains(v+d)?v+=d:(h.write(i.indexOf(v),n),i.size()<4095&&(i.size()==1<<n&&(n+=1),i.add(v+d)),v=d)}return h.write(i.indexOf(v),n),h.write(e,n),h.flush(),l.toByteArray()},u=function(){var t={},r=0,e={add:function(n){if(e.contains(n))throw"dup key:"+n;t[n]=r,r+=1},size:function(){return r},indexOf:function(r){return t[r]},contains:function(r){return void 0!==t[r]}};return e};return i}(t,r),o=0;o<r;o+=1)for(var i=0;i<t;i+=1)n.setPixel(i,o,e(i,o));var a=D();n.write(a);for(var u=function(){var t=0,r=0,e=0,n="",o={},i=function(t){n+=String.fromCharCode(a(63&t))},a=function(t){if(t<0);else{if(t<26)return 65+t;if(t<52)return t-26+97;if(t<62)return t-52+48;if(62==t)return 43;if(63==t)return 47}throw"n:"+t};return o.writeByte=function(n){for(t=t<<8|255&n,r+=8,e+=1;r>=6;)i(t>>>r-6),r-=6},o.flush=function(){if(r>0&&(i(t<<6-r),t=0,r=0),e%3!=0)for(var o=3-e%3,a=0;a<o;a+=1)n+="="},o.toString=function(){return n},o}(),f=a.toByteArray(),c=0;c<f.length;c+=1)u.writeByte(f[c]);return u.flush(),"data:image/gif;base64,"+u};return t}();qrcode.stringToBytesFuncs["UTF-8"]=function(t){return function(t){for(var r=[],e=0;e<t.length;e++){var n=t.charCodeAt(e);n<128?r.push(n):n<2048?r.push(192|n>>6,128|63&n):n<55296||n>=57344?r.push(224|n>>12,128|n>>6&63,128|63&n):(e++,n=65536+((1023&n)<<10|1023&t.charCodeAt(e)),r.push(240|n>>18,128|n>>12&63,128|n>>6&63,128|63&n))}return r}(t)},function(t){"function"==typeof define&&define.amd?define([],t):"object"==typeof exports&&(module.exports=t())}((function(){return qrcode}));
+</script>
+<script>
+/* ===== ตั้งค่า (แก้ตรงนี้ที่เดียว) ===== */
+const COURSE    = 'เล่นเปียโน + ร้องเพลง';
+const PRICE     = { full: 3900, owner: 2950 };  // ราคาเต็ม / คนที่มีเล่ม 1 (เล่มจริงหรือ E-Book)
+const OWNER_KEY = 'PF1SING';                     // คีย์เวิร์ด LINE สำหรับคนที่มีเล่ม 1
+const BASIC_KEY = 'PFBASICSING';                 // คีย์เวิร์ด LINE สำหรับนักเรียน Basic Piano (ราคาอยู่ในข้อความตอบกลับ LINE)
+const INTRO_YT  = '78h8OsBtmY8';                 // คลิปแนะนำคอร์ส
+const LINE_ID   = '@PianoFolder';
+const LINE_URL  = 'https://lin.ee/Nd6pxlW';
+const PAY = { bank: 'ธนาคารกรุงเทพ', no: '5620686732', show: '562-0-68673-2', name: 'นาย สุรัฐ อชิรเสนา' };
+const DUO       = { price: 6900, full: 8700 };     // แพ็กคู่ Basic Piano + เล่นเปียโน + ร้องเพลง (ราคาเต็มรวม 4,800 + 3,900)
+/* ตัวอย่างเพลงในคอร์ส (เรียงตามที่แสดง) · yt: รหัสคลิปตัวอย่าง YouTube · note: ข้อความในวงเล็บต่อท้ายชื่อ */
+const SONGS = [
+  { t: 'รักไม่ต้องการเวลา', yt: '36hNpyvSi7E' },
+  { t: 'หมอกหรือควัน', yt: 'ljfUOlBJ0fk' },
+  { t: 'ลม', yt: '1DZRqjhPPyM' },
+  { t: 'จากนี้ไปจนนิรันดร์', yt: 'dIq-5tk2LWE' },
+  { t: 'จังหวะตกหลุมรัก', yt: 'V8VXnf4nmTg' },
+  { t: 'เพียงชายคนนี้', note: 'ไม่ใช่ผู้วิเศษ', yt: '1rrhY7KKUJM' }
+];
+/* ===================================== */
+
+const $ = id => document.getElementById(id);
+const fmt = n => '฿' + n.toLocaleString('th-TH');
+const lineMsg = t => 'https://line.me/R/oaMessage/' + encodeURIComponent(LINE_ID) + '/?' + encodeURIComponent(t);
+const thumb = id => 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+$('pFull').textContent = $('sumFull').textContent = $('ownerFull').textContent = fmt(PRICE.full);
+$('pOwner').textContent = $('ownerP').textContent = fmt(PRICE.owner);
+document.querySelectorAll('[data-owner-price]').forEach(el => el.textContent = fmt(PRICE.owner));
+document.querySelectorAll('[data-line]').forEach(a => a.href = LINE_URL);
+$('ownerKey').textContent = OWNER_KEY;
+$('basicKey').textContent = BASIC_KEY;
+$('gName').textContent = PAY.name;
+$('yr').textContent = new Date().getFullYear();
+$('acct').innerHTML = PAY.bank + '<span class="no">' + PAY.show + '</span>' + PAY.name +
+  '<br><button class="copy" id="copyBtn" type="button">คัดลอกเลขบัญชี</button>';
+$('orderBtn').href = lineMsg('สมัครเรียนคอร์ส ' + COURSE + '\nยอดโอน ' + fmt(PRICE.full));
+$('ownerBtn').href = lineMsg(OWNER_KEY);
+$('duoP').textContent = fmt(DUO.price);
+$('duoFull').textContent = fmt(DUO.full);
+$('duoBtn').href = lineMsg('สมัครเรียนแพ็กคู่ Basic Piano และ เล่นเปียโน + ร้องเพลง\nยอดโอน ' + fmt(DUO.price));
+$('basicKeyLink').href = lineMsg(BASIC_KEY);
+$('basicKeyLink').dataset.step3 = 'ส่งชื่อ Facebook ที่ใช้ในกลุ่ม Basic Piano ต่อในแชทนั้น';
+
+function toast(t){ const el = $('toast'); el.textContent = t; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2200); }
+$('copyBtn').onclick = () => {
+  const done = () => { $('copyBtn').textContent = '✓ คัดลอกแล้ว'; $('copyBtn').classList.add('done'); toast('คัดลอกเลขบัญชีแล้ว ' + PAY.show); };
+  if (navigator.clipboard) navigator.clipboard.writeText(PAY.no).then(done, () => toast('คัดลอกไม่ได้ กรุณาจดเลข ' + PAY.show));
+  else toast('กรุณาจดเลข ' + PAY.show);
+};
+
+/* คลิปแนะนำ: โหลดเมื่อกดเท่านั้น */
+$('introThumb').src = thumb(INTRO_YT);
+$('intro').onclick = function(){
+  if (this.dataset.on) return; this.dataset.on = 1;
+  this.insertAdjacentHTML('beforeend', '<iframe src="https://www.youtube-nocookie.com/embed/' + INTRO_YT + '?autoplay=1&rel=0&playsinline=1" title="แนะนำคอร์ส เล่นเปียโน + ร้องเพลง" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>');
+};
+
+/* การ์ดเพลง + ตัวเล่นคลิป */
+const play = '<span class="pi"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#1B2F45"/></svg></span>';
+$('songList').innerHTML = SONGS.map((s, i) => {
+  const badge = (s.isNew ? '<span class="new">เพลงใหม่</span>' : '') + (s.only ? '<span class="new new--only">มีเฉพาะคอร์สนี้</span>' : '');
+  const tx = '<span class="tx"><b>' + esc(s.t) + (s.note ? ' <span class="note">(' + esc(s.note) + ')</span>' : '') + '</b>' + (s.a ? '<small>' + esc(s.a) + '</small>' : '') + '</span>';
+  if (!s.yt) return '<div class="song song--soon"><span class="th"><span class="soon">ตัวอย่างเร็ว ๆ นี้</span>' + badge + '</span>' + tx + '</div>';
+  return '<button class="song" type="button" data-i="' + i + '" aria-label="ดูตัวอย่างเพลง ' + esc(s.t) + '">' +
+    '<span class="th"><img src="' + thumb(s.yt) + '" alt="" loading="lazy" width="480" height="360">' + badge + play + '</span>' + tx + '</button>';
+}).join('');
+const closePlayer = () => { $('player').classList.remove('open'); $('playerFrame').innerHTML = ''; document.body.style.overflow = ''; };
+document.querySelectorAll('button.song').forEach(b => b.onclick = () => {
+  const s = SONGS[b.dataset.i];
+  $('playerTitle').textContent = s.t;
+  $('playerFrame').innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + s.yt + '?autoplay=1&rel=0&playsinline=1" title="' + esc(s.t) + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+  $('player').classList.add('open'); document.body.style.overflow = 'hidden';
+});
+$('playerClose').onclick = closePlayer;
+$('player').onclick = e => { if (e.target === $('player')) closePlayer(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePlayer(); });
+
+/* ===== LINE จากคอม (ระบบเดียวกับหน้าหนังสือเล่ม 2) =====
+   มือถือ: ลิงก์ line.me/R/oaMessage เปิดแอป LINE พร้อมข้อความได้เลย
+   คอม: ลิงก์นี้เปิดไม่ได้ → ขึ้น QR ให้สแกนด้วยมือถือ + ปุ่มคัดลอกข้อความ
+   ปุ่มไหนอยากให้ QR สั้นกว่าข้อความเต็ม ใส่ data-qr="ข้อความสั้น" ไว้ที่ปุ่ม
+   ขั้นที่ 3 เปลี่ยนได้ด้วย data-step3="..." (ว่างไว้ = ซ่อน) */
+(function(){
+  const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
+  if (IS_MOBILE) return;
+  const box = document.getElementById('lgBox'), copyBtn = document.getElementById('lgCopy');
+  let text = '';
+  const msgOf = href => { const i = href.indexOf('/?'); try { return i > -1 ? decodeURIComponent(href.slice(i + 2)) : ''; } catch (_) { return ''; } };
+  const close = () => { box.hidden = true; document.body.style.overflow = ''; };
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href*="line.me/R/oaMessage/"]');
+    if (!a || e.defaultPrevented) return;
+    e.preventDefault();
+    text = msgOf(a.href);
+    const short = a.dataset.qr || text;
+    const qrHref = a.href.slice(0, a.href.indexOf('/?') + 2) + encodeURIComponent(short);
+    const q = qrcode(0, 'M'); q.addData(qrHref); q.make();
+    document.getElementById('lgQr').innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+    const s3 = document.getElementById('lgS3'), st = a.dataset.step3;   // data-step3="" = ไม่แสดงขั้นที่ 3
+    s3.hidden = st === ''; s3.textContent = st || 'แนบสลิปการโอนต่อในแชทนั้นได้เลย';
+    copyBtn.textContent = 'คัดลอกข้อความ'; copyBtn.classList.remove('done');
+    box.hidden = false; document.body.style.overflow = 'hidden';
+  });
+  copyBtn.onclick = () => {
+    const ok = () => { copyBtn.textContent = '✓ คัดลอกแล้ว ไปวางในแชท @PianoFolder ได้เลย'; copyBtn.classList.add('done'); };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(ok, () => alert('คัดลอกไม่ได้ กรุณาสแกน QR แทนครับ'));
+    else alert('คัดลอกไม่ได้ กรุณาสแกน QR แทนครับ');
+  };
+  document.getElementById('lgClose').onclick = close;
+  box.onclick = e => { if (e.target === box) close(); };
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
+})();
+
+</script>
+</body>
+</html>

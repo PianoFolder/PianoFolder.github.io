@@ -232,6 +232,18 @@ h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2p
 #why .wcard .wi{background:#E9F0F7}
 #why .books-note{border-top-color:#DCE6F0}
 #why .books-note a{color:var(--c-action)}
+
+/* วลีไทย: ตัดบรรทัดได้เฉพาะระหว่างวลี */
+.ph{white-space:nowrap}
+/* แพ็กคู่ Basic Piano + เล่นเปียโน + ร้องเพลง (ปุ่มรอง ไม่แย่งปุ่มหลัก) */
+.duo{margin-top:var(--gap);background:#fff;border:1px dashed var(--c-gold);border-radius:var(--r-panel);padding:clamp(1.25rem,1rem + 2vw,2rem);display:grid;gap:1rem;align-items:center}
+@media (min-width:860px){.duo{grid-template-columns:1fr auto}}
+.duo h3{margin-bottom:.3rem}
+.duo p{margin:0 0 .5rem}
+.duo .fine{margin:0}
+.duo__p b{font-size:1.5rem;font-weight:800}
+.duo__p s{color:var(--c-ink-soft);margin-left:.3rem}
+@media (max-width:520px){.duo .btn{width:100%}}
 </style>
 </head>
 <body>
@@ -418,6 +430,16 @@ h2.center::after{content:"";display:block;width:56px;height:4px;border-radius:2p
         <p class="fine" style="margin:.75rem 0 0">เพลงแถมเลือกได้ทุกเพลงใน <a href="/piano-collection/">Piano Collection</a> ยกเว้นเพลงที่มีอยู่ในคอร์สนี้แล้ว ราคาพิเศษนี้ให้เพราะช่วงแรกของคอร์สเป็นเพลงพื้นฐานชุดเดียวกับในหนังสือ <span class="nowrap">รู้งี้...</span><wbr><span class="nowrap">เล่นเปียโนได้นานแล้ว</span></p>
       </div>
     </div>
+    <div class="duo">
+      <div>
+        <h3><span class="ph">อยากเรียนทั้ง</span> Basic&nbsp;Piano <span class="ph">และ</span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง?</span></h3>
+        <p class="duo__p"><span class="ph">แพ็กคู่&nbsp;2&nbsp;คอร์ส</span> <b id="duoP"></b> <s id="duoFull"></s></p>
+        <p><span class="ph">เล่นเดี่ยวก็ได้</span> <span class="ph">เล่นไปร้องไปก็ได้</span> <span class="ph">ทั้งสองคอร์ส</span><wbr><span class="ph">เรียนได้ไม่มีวันหมดอายุ</span> <span class="ph">จะเริ่มคอร์สไหนก่อน</span><wbr><span class="ph">ก็ได้ครับ</span> <a href="/courses/piano-singing/"><span class="ph">ดูรายละเอียด</span> <span class="ph">เล่นเปียโน&nbsp;+&nbsp;ร้องเพลง&nbsp;→</span></a></p>
+        <p class="fine" style="margin-bottom:.4rem"><span class="ph">โอนเข้าบัญชีเดียวกับด้านบน</span> <span class="ph">แล้วกดปุ่มส่งข้อความ</span><wbr><span class="ph">พร้อมสลิป</span> · <span class="ph">ใช้ร่วมกับส่วนลดอื่นไม่ได้</span></p>
+        <p class="fine"><span class="ph">มีหนังสือ</span> <span class="ph">รู้งี้...</span><wbr><span class="ph">เล่นเปียโนได้นานแล้ว</span> <span class="ph">อยู่แล้ว?</span> <a data-line href="#" target="_blank" rel="noopener"><span class="ph">ทักมาใน</span> LINE</a> <span class="ph">ก่อน</span> <span class="ph">ครูแฟ้มช่วยดู</span><wbr><span class="ph">ราคาที่คุ้มที่สุดให้</span></p>
+      </div>
+      <a class="btn btn--quiet" id="duoBtn" href="#" target="_blank" rel="noopener">สมัครแพ็กคู่ทาง LINE</a>
+    </div>
   </div>
 </section>
 
@@ -488,6 +510,7 @@ const OWNER_KEY = 'PF1BASIC';                    // คีย์เวิร์�
 const INTRO_YT  = '5ceQ57SZlAk';                 // คลิปแนะนำคอร์ส
 const LINE_ID   = '@PianoFolder';
 const LINE_URL  = 'https://lin.ee/Nd6pxlW';
+const DUO       = { price: 6900, full: 8700 };     // แพ็กคู่ Basic Piano + เล่นเปียโน + ร้องเพลง (ราคาเต็มรวม 4,800 + 3,900)
 const PAY = { bank: 'ธนาคารกรุงเทพ', no: '5620686732', show: '562-0-68673-2', name: 'นาย สุรัฐ อชิรเสนา' };
 /* เพลงในคอร์ส (เรียงตามที่แสดง)
    yt: รหัสคลิปตัวอย่าง YouTube · ใส่ '' ไว้ = ขึ้น "ตัวอย่างเร็ว ๆ นี้"
@@ -524,6 +547,9 @@ $('acct').innerHTML = PAY.bank + '<span class="no">' + PAY.show + '</span>' + PA
   '<br><button class="copy" id="copyBtn" type="button">คัดลอกเลขบัญชี</button>';
 $('orderBtn').href = lineMsg('สมัครเรียนคอร์ส ' + COURSE + '\nยอดโอน ' + fmt(PRICE.full));
 $('ownerBtn').href = lineMsg(OWNER_KEY);
+$('duoP').textContent = fmt(DUO.price);
+$('duoFull').textContent = fmt(DUO.full);
+$('duoBtn').href = lineMsg('สมัครเรียนแพ็กคู่ Basic Piano และ เล่นเปียโน + ร้องเพลง\nยอดโอน ' + fmt(DUO.price));
 
 function toast(t){ const el = $('toast'); el.textContent = t; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2200); }
 $('copyBtn').onclick = () => {
